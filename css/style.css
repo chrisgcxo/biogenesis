@@ -40,6 +40,7 @@ header nav a h4{
 body{
     background-color: transparent; 
     overflow-x: hidden; 
+    width: 100%;
 }
 
 @font-face {
