@@ -45,7 +45,7 @@ body{
 @font-face {
     font-family: 'Technos Regular';
     font-style: normal;
-    src: local('Technos Regular'), url('fonts/Technos-PKDZP.woff') format('woff');
+    src: local('Technos Regular'), url('/fonts/Technos-PKDZP.woff') format('woff');
     }
 
 body h1{
