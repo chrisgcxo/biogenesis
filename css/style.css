@@ -115,9 +115,9 @@ body{
 
 
   .seccion_1 .images img.implante_1 {
-position: relative;
-top:0px;
-right:390px;
+position: absolute;
+top:300px;
+right: 100px;
 z-index:1;
   }
 
