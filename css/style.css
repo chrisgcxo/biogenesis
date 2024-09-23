@@ -6,20 +6,22 @@ header{
     width: 100%;
     height: 80px;
     padding: 20px;
-       background-color: #000000;
+    margin: 0;
+    justify-content: space-between;
 }
 
 /* logo */
 header img{
     width: 120px;
     height: 120px;
-    margin: 0 15px;
+    margin-left: 40px;
 }
+
 header nav{
     display: flex;
-    justify-content: space-between; /* Distributes items evenly with space between them */
+    justify-content: center;/* Distributes items evenly with space between them */
     align-items: center; /* Aligns items vertically in the center */
-    margin:0 auto;
+    margin:auto;
 }
 
 
@@ -35,13 +37,19 @@ header nav a h4{
     color: #fff;
     font-weight: 200;
     font-size: 1.2em;
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.6);
 }
 
 /* body*/
 body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: transparent; 
-    overflow-x: hidden; 
     width: 100%;
+    margin: 0 auto;
+    background-color: #030303;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -50,11 +58,32 @@ body{
     src: local('Technos Regular'), url('../fonts/Technos-PKDZP.woff') format('woff');
     }
 
-body h1{
+    /*seccion 1*/
+    .seccion_1 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center;    /* Centra verticalmente */
+        background-image: url('../SVG/fondo_grad.svg');
+        background-repeat: no-repeat;
+        background-size:130%;
+    }
+
+
+ 
+      .seccion_1 .texto {
+        align-items: flex-start;
+        width: 60%; /* Ajusta el ancho del texto */
+        display: flex;
+        flex-direction: column; /* Apila los elementos del texto verticalmente */
+      }
+
+
+.seccion_1 .texto h1{
     margin-top: 50px;
     margin-left:50px;
     color: #fff;
-
     background: linear-gradient(90deg, #ffffff, #07040D); /* Degradado de izquierda a derecha */
     -webkit-background-clip: text; /* Aplica el degradado solo al texto */
     background-clip: text; /* Standard property for compatibility */
@@ -65,8 +94,7 @@ body h1{
    font-size:64px;
 }
 
-body p{
-
+.seccion_1 .texto p{
     font-family: 'JetBrains Mono', monospace;
     text-decoration: none;
     text-shadow: 4px 4px 8px rgba(0,0,0,0.6);
@@ -77,28 +105,113 @@ body p{
     color: #fff;
 }
 
-fondo-animado {
-    position: relative; /* Necesario para posicionar el pseudo-elemento */
+.seccion_1 .images {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 40%; /* Ajusta el ancho de las imágenes */
   }
-  
-  .fondo-animado::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+
+
+
+  .seccion_1 .images img.implante_1 {
+position: relative;
+top:0px;
+right:390px;
+z-index:1;
+  }
+
+
+img.amara_1 {
+    position: relative; 
+    bottom:0px; /* Ajusta este valor para mover la imagen hacia arriba o hacia abajo */
+    right:330px;   /* Ajusta este valor para mover la imagen hacia la izquierda o derecha */
+
+  }
+
+  /*seccion 2*/
+  .seccion_2{
+    display:flex; 
+    align-items:center;
+    flex-direction:column;
+    background-color: #fff;
     width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to right, #000000, #333333, #666666, #ffffff, #666666, #333333, #000000);
-    background-size: 200% 100%;
-     background-repeat: no-repeat;
-    animation: mover-fondo 15s linear infinite;
-    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
-    /* Aquí puedes aplicar la máscara */
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* De opaco a transparente */
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   }
-  
-  @keyframes mover-fondo {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
+
+
+  .contenedor_t{
+display: flex;
+align-items: flex-start;
+flex-direction: column;
+width: 90%;
+    }
+
+  .seccion_2 h2{
+    font-family: 'JetBrains Mono', monospace;
+    color: #030303;
   }
+
+  .seccion_2 h3{
+    font-family: 'JetBrains Mono', monospace;
+    color: #030303;
+  }
+
+ .seccion_2 .contenedor1{
+display: flex;
+flex-direction: row;
+align-items:flex-start;
+justify-content: space-between;
+  }
+
+  .seccion_2 .contenedor1a{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .seccion_2 .container_img1{
+    margin-top:60px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    background-color:#d9d9d9;
+  }
+
+.placeholder{
+    width: 50%;
+    height: 50%;
+  }
+
+
+  .seccion_2 contenedor2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .seccion_2 .container_fede{
+        display: flex;
+        justify-content: center;
+        width:35%;
+        border-radius: 30px;
+        background-color:#d9d9d9;
+      }
+    
+
+/*seccion 3*/
+ 
+.seccion_3{
+    padding-top: 100px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    width: 100%;
+ }
+
+ .seccion_3 h3{
+    font-family: 'JetBrains Mono', monospace;
+    color: #030303;
+ }
