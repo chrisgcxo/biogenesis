@@ -231,7 +231,15 @@ width: 90%;
 
  .seccion_3 .contenedor4y5{
     display: flex;
-    width: 90%;
+    width: 100%;
     align-items:flex-start;
     justify-content: space-between;
  }
+
+ .seccion_3 .contenedor_4{
+ margin-left: 60px;
+ }
+
+ .seccion_3 .contenedor_5{
+    margin-top:100px;
+    }
