@@ -3,6 +3,7 @@ header{
     height: 80px;
     padding: 20px;
     background-color: #030303;
+    border-radius: 0 0 20px 20px;
 }
 
 
@@ -43,7 +44,7 @@ header nav a h4{
     color: #fff;
     font-weight: 200;
     font-size: 1.2em;
-    text-shadow: 4px 4px 8px rgba(245, 252, 210, 0.6);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 
@@ -89,13 +90,29 @@ background-color: #ffffff;
 
  
       .seccion_1 .texto {
-        margin-left: 30px;
-        align-items: flex-start;
+        /*version sin vidrio*/
+        margin-left: 45px;
+        /*align-items: flex-start;*/
         justify-content: space-between;
         width: 60%; /* Ajusta el ancho del texto */
         display: flex;
         flex-direction: column; /* Apila los elementos del texto verticalmente */
         height: 100%;
+
+        /*efecto vidrio*/
+        background-color:#d9d9d900;
+        backdrop-filter: blur(25px);
+        box-shadow: -15px 17px 17px  rgba(10,10,10,0.25);
+        border: solid 3px #ffffff07;
+        border-radius: 20px;
+        align-items: center
+
+        /*activar mascara*/
+       /* outline: 3px solid #ffffff07; 
+        mask-image: url(../SVG/mascara_texto.svg);
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        mask-position: center;*/
       }
 
 
@@ -108,14 +125,14 @@ background-color: #ffffff;
     font-weight: 400;
    font-family:'Technos Regular';
    font-weight:normal;
-   font-size:64px;
+   font-size: 4em;
 }
 
 .seccion_1 .texto p{
     font-family: 'JetBrains Mono', monospace;
     text-decoration: none;
     text-shadow: 4px 4px 8px rgba(0,0,0,0.6);
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: 400;
     color: #fff;
     
@@ -143,8 +160,9 @@ z-index:1;
 img.amara_1 {
     position: relative; 
     bottom:0px; /* Ajusta este valor para mover la imagen hacia arriba o hacia abajo */
-    right:330px;   /* Ajusta este valor para mover la imagen hacia la izquierda o derecha */
+    right:350px;   /* Ajusta este valor para mover la imagen hacia la izquierda o derecha */
     object-fit: contain;  /* Centra verticalmente */
+    z-index: -1;
   }
 
   /*seccion 2*/
@@ -167,21 +185,25 @@ width: 90%;
     .seccion_2 h1{
         font-family: 'JetBrains Mono', monospace;
        font-weight: 400;
-       font-size:32px;   
+       font-size:2em; 
+       margin-top: 40px;
+       padding: 0px;  
     }
 
   .seccion_2 h2{
     font-family: 'JetBrains Mono', monospace;
     color: #030303;
     font-weight: 800;
-    font-size: 48px;
+    font-size: 3em;
+    margin-top: 35px;
+    padding: 0px;  
   }
 
   .seccion_2 h3{
     font-family: 'JetBrains Mono', monospace;
     color: #030303;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 1.6em
   }
 
  .seccion_2 .contenedor1{
@@ -199,12 +221,13 @@ width: 90%;
   }
 
   .seccion_2 .container_img1{
-    margin-top:60px;
+    margin-top:5px;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
     border-radius: 30px;
     background-color:#d9d9d9;
+    box-shadow: -9px 9px 14px 0px rgb(10 10 10 / 13%);
   }
 
 .placeholder{
@@ -224,17 +247,20 @@ width: 90%;
     .seccion_2 .container_fede{
         display: flex;
         justify-content: center;
-        width:35%;
+        width:40%;
         border-radius: 30px;
         background-color:#d9d9d9;
         overflow: hidden;
+        box-shadow: -9px 9px 14px 0px rgb(10 10 10 / 13%);
+        margin-top: 45px;
+        margin-left: 20px;
       }
     
 
 /*seccion 3*/
  
 .seccion_3{
-    padding-top: 100px;
+    padding-top: 150px;
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -245,7 +271,7 @@ width: 90%;
     font-family: 'JetBrains Mono', monospace;
     color: #030303;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 1.6em;
  }
 
  .seccion_3 .contenedor4y5{
@@ -263,7 +289,10 @@ width: 90%;
     margin-top:100px;
     background-color:#d9d9d9;
     overflow: hidden;
+    box-shadow: -15px 17px 17px  rgba(10,10,10,0.25);
     mask-image: url(../SVG/Vector.svg);
+    outline: 3px solid #ffffff07; 
+
     }
 
     /*efecto vidrio*/
@@ -271,9 +300,7 @@ width: 90%;
       background-color:#d9d9d900;
       backdrop-filter: blur(25px);
       box-shadow: -15px 17px 17px  rgba(10,10,10,0.25);
-      border-radius: 10px;
-      border: solid 2px #ffffff07;
-      padding: auto;
+      border: solid 3px #ffffff07;
     }
 
             
