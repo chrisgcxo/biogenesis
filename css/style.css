@@ -67,14 +67,25 @@ background-color: #ffffff;
         display: flex;
         flex-direction: row;
         width: 100%;
-        padding: 6px;
         justify-content: center; /* Centra horizontalmente */
         align-items: center;  
-        background: url("../SVG/fondo_grad.svg");
-        background-position:center;
-        background-size: cover;
     }
 
+    /*gradiente de fondo*/
+    .gradient{
+      position: absolute; 
+      top:0px;
+       z-index:-1;
+       margin: 0px;
+    }
+
+    #gradient-canvas {
+      width:100%;
+      --gradient-color-1: #363636; 
+      --gradient-color-2: #6b6969; 
+      --gradient-color-3: #c7c7c7;  
+      --gradient-color-4: #dadada;
+    }
 
  
       .seccion_1 .texto {
@@ -264,3 +275,7 @@ width: 90%;
       border: solid 2px #ffffff07;
       padding: auto;
     }
+
+            
+
+      

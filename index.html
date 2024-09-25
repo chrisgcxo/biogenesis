@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"> <!-- css -->
 </head>
-<header>
+<header class="glass">
 <div class="contenedor_header">
         <img src="images/logo(b).png" alt="logo" class="logo">
            <nav>
@@ -22,6 +22,10 @@
 </header>
 
 <body>
+    <div class="gradient">
+        <canvas id="gradient-canvas" data-transition-in/>
+    </div>
+
     <section class="seccion_1">
 <div class="texto">
     <h1>explora <br>
@@ -38,7 +42,7 @@
 </div>
 <div class="images">
     <img src="images/img_mujer.png" alt="amaraa" class="amara_1">
-        <img src="images/foto implante.png" alt="implante" class="implante_1">
+        <!--<img src="images/foto implante.png" alt="implante" class="implante_1">-->
 </div>
 </section>
 
@@ -79,10 +83,26 @@
       </div>
             </diV>
         </section>
- 
+
+        
+<!--script gradiente-->
+<script type="module">
+    import { Gradient } from '../js/gradient.js'; 
+
+    const gradient = new Gradient();
+    gradient.initGradient('#gradient-canvas'); 
+  </script>   
+
+        <!--copiar el height de un div y pegarlo en otro-->
+        <script>
+            window.addEventListener('load', () => {
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const section1Height = document.querySelector('.seccion_1').offsetHeight;
+                const totalHeight = headerHeight + section1Height;
+                document.getElementById('gradient-canvas').style.height = `${totalHeight}px`;
+            });
+        </script>
+
 </body>
-
-<footer>
-</footer>
-
 </html>
+
