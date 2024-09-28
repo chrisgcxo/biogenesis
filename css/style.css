@@ -2,11 +2,30 @@
 header{
     height: 80px;
     padding: 20px;
-    background-color: #030303;
-    border-radius: 0 0 20px 20px;
+    border-radius: 30px;
+    width: 100%;
 }
 
+/* body*/
+body{
+  display: flex;
+flex-direction: column;
+margin: 0px;
+padding: 0px;
+align-items: center;
+justify-content: center;
+overflow-x: hidden;
+background-color: #ffffff;
+}
 
+@font-face {
+    font-family: 'Technos Regular';
+    font-style: normal;
+    src: local('Technos Regular'), url('../fonts/Technos-PKDZP.woff') format('woff');
+    }
+
+    
+ /*HEADER*/   
 header .contenedor_header{
   width: 100%;
   height: 100%;
@@ -49,19 +68,7 @@ header nav a h4{
 
 
 
-/* body*/
-body{
-margin: 0px;
-padding: 0px;
-overflow-x: hidden;
-background-color: #ffffff;
-}
 
-@font-face {
-    font-family: 'Technos Regular';
-    font-style: normal;
-    src: local('Technos Regular'), url('../fonts/Technos-PKDZP.woff') format('woff');
-    }
 
     /*seccion 1*/
     .seccion_1 {
@@ -73,21 +80,33 @@ background-color: #ffffff;
     }
 
     /*gradiente de fondo*/
+
     .gradient{
       position: absolute; 
       top:0px;
        z-index:-1;
        margin: 0px;
+       width: 100%;
     }
 
-    #gradient-canvas {
-      width:100%;
+
+  #gradient-canvas  {
+    display: block;
+    width: inherit;
       --gradient-color-1: #363636; 
       --gradient-color-2: #6b6969; 
       --gradient-color-3: #c7c7c7;  
       --gradient-color-4: #dadada;
+      filter: blur(8px);
+      opacity: 0.8;
+
+      aspect-ratio: auto 402/300;
     }
 
+    ccanvas {
+      overflow-clip-margin: content-box;
+      overflow: clip;
+  }
  
       .seccion_1 .texto {
         /*version sin vidrio*/
@@ -98,14 +117,11 @@ background-color: #ffffff;
         display: flex;
         flex-direction: column; /* Apila los elementos del texto verticalmente */
         height: auto;
-        padding: 15px;
-        /*efecto vidrio*/
-        background-color:#d9d9d900;
-        backdrop-filter: blur(25px);
-        box-shadow: -15px 17px 17px  rgba(10,10,10,0.25);
-        border: solid 3px #ffffff07;
-        border-radius: 20px;
+        padding: 30px;
       }
+
+
+ 
 
 
 .seccion_1 .texto h1{
@@ -121,6 +137,7 @@ background-color: #ffffff;
 }
 
 .seccion_1 .texto p{
+  margin-top: -25px;
     font-family: 'JetBrains Mono', monospace;
     text-decoration: none;
     text-shadow: 4px 4px 8px rgba(0,0,0,0.6);
@@ -133,8 +150,9 @@ background-color: #ffffff;
 .seccion_1 .images {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: flex-end;
     width: 40%; /* Ajusta el ancho de las imágenes */
+    overflow-y: clip;
   }
 
 
@@ -151,10 +169,19 @@ z-index:1;
 
 img.amara_1 {
     position: relative; 
-    bottom:0px; /* Ajusta este valor para mover la imagen hacia arriba o hacia abajo */
-    right:350px;   /* Ajusta este valor para mover la imagen hacia la izquierda o derecha */
+    /*pos original
+    bottom: -132px;
+    right: 295px;
+    */
+
+    /*opcion 2*/
+    bottom: -108px;
+    right: 121px;
     object-fit: contain;  /* Centra verticalmente */
     z-index: -1;
+    height: 648px;
+    aspect-ratio: 1/1;
+
   }
 
   /*seccion 2*/
@@ -175,6 +202,8 @@ align-items: flex-start;
 flex-direction: column;
 width: 90%;
     }
+
+    /*SECTION 2*/
 
     .seccion_2 h1{
         font-family: 'JetBrains Mono', monospace;
@@ -236,7 +265,7 @@ width: 90%;
     justify-content: center;
     }
 
-    /* neumorphism*/
+
     .seccion_2 .container_fede{
         display: flex;
         justify-content: center;
@@ -323,9 +352,38 @@ width: 90%;
       backdrop-filter: blur(25px);
       box-shadow: -15px 17px 17px  rgba(10,10,10,0.25);
       border: solid 3px #ffffff07;
-      
+      border-radius: 30px;
     }
 
-            
+    /*texto giratorio*/
+    tg {
+      height: 200px; /* Increase the height */
+      width: 200px;  /* Increase the width */
+      position: relative;
+      top: -110px;
+      left: -410px; /* Adjust the position if necessary */
+      font-size: 13px; /* Adjust the font size if necessary */
+      text-align: center;
+      animation: effect 30s linear infinite; /* Slower and smoother animation */
+    }
 
-      
+    @keyframes effect {
+      0% {
+      transform: rotate(0deg);
+      }
+      100% {
+      transform: rotate(360deg);
+      }
+    }
+
+    span {
+      position: absolute;
+      left: 50%;
+      transform-origin: 0px 100px; /* Adjust the transform-origin to match the new size */
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #ffffff;
+      filter: blur(0.8px);
+      text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.6);
+    }

@@ -28,7 +28,7 @@
 
     <section class="seccion_1">
 <div class="texto">
-    <h1>explora <br>
+    <h1 class="glass" style="padding: 20px;">explora <br>
         mas alla de <br>
         lo ordinario
     </h1>
@@ -40,8 +40,10 @@
         del pasado.
     </p>
 </div>
+</div>
 <div class="images">
-    <img src="images/img_mujer2.png" alt="amaraa" class="amara_1">
+    <img src="images/img_mujer3.png" alt="amaraa" class="amara_1">
+    <tg id="text"></tg>
         <!--<img src="images/foto implante.png" alt="implante" class="implante_1">-->
 </div>
 </section>
@@ -78,6 +80,7 @@
                     <h3>ORGANIZADORA Y RESPONSABLE DE <br>
                         EVENTO: AMARA TORRADO</h3>
                 </div>
+                
       <div class="contenedor_5 element element-4">
         <img src="images/amara_frente.png" alt="amara_f" style="object-fit: cover;">
       </div>
@@ -90,18 +93,37 @@
     import { Gradient } from './js/gradient.js'; 
 
     const gradient = new Gradient();
+    const canvas = document.getElementById('gradient-canvas');
+    canvas.width = window.innerWidth; // Set the width to the window's width
+    canvas.height = window.innerHeight; // Set the height to the window's height
     gradient.initGradient('#gradient-canvas'); 
   </script>   
 
         <!--copiar el height de un div y pegarlo en otro-->
         <script>
             window.addEventListener('load', () => {
-                const headerHeight = document.querySelector('header').offsetHeight;
+                const header = document.querySelector('header');
+                const headerHeight = header.offsetHeight;
+                const headerMarginBottom = parseFloat(window.getComputedStyle(header).marginBottom);
                 const section1Height = document.querySelector('.seccion_1').offsetHeight;
-                const totalHeight = headerHeight + section1Height;
+                const totalHeight = headerHeight + headerMarginBottom + section1Height;
                 document.getElementById('gradient-canvas').style.height = `${totalHeight}px`;
             });
         </script>
+
+<script>
+    const str = "NUEVO MODELO XR_20G-NUEVO MODELO";
+    const text = document.getElementById("text");
+    window.onload = function(){
+        for (let i = 0; i < str.length; i++) {
+            let span = document.createElement('span');
+            span.innerHTML = str[i] 
+            text.appendChild(span);
+            console.log(str[i])
+            span.style.transform = `rotate(${11*i}deg)`;
+        }
+    }
+</script>
 
 </body>
 </html>
