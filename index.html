@@ -27,11 +27,11 @@
     </div>
 
     <section class="seccion_1">
-<div class="texto">
-    <h1 class="glass" style="padding: 20px;">explora <br>
-        mas alla de <br>
-        lo ordinario
-    </h1>
+<div class="texto glass">
+            <h1 >explora <br>
+                mas alla de <br>
+                lo ordinario
+            </h1>
     <p>
         Creemos en un futuro donde cada <br>
         individuo tenga el poder de <br>
@@ -84,7 +84,7 @@
       <div class="contenedor_5 element element-4">
         <img src="images/amara_frente.png" alt="amara_f" style="object-fit: cover;">
       </div>
-            </diV>
+            </div>
         </section>
 
         
@@ -109,10 +109,9 @@
                 const totalHeight = headerHeight + headerMarginBottom + section1Height;
                 document.getElementById('gradient-canvas').style.height = `${totalHeight}px`;
             });
-        </script>
 
-<script>
-    const str = "NUEVO MODELO XR_20G-NUEVO MODELO";
+            /*texto giratorio*/
+            const str = "NUEVO MODELO XR_20G-NUEVO MODELO";
     const text = document.getElementById("text");
     window.onload = function(){
         for (let i = 0; i < str.length; i++) {
@@ -122,9 +121,16 @@
             console.log(str[i])
             span.style.transform = `rotate(${11*i}deg)`;
         }
+        /*card texto hover*/
+        VanillaTilt.init(document.querySelector(".texto"), {
+		max: 10,
+		speed: 200,
+		glare: true,
+		"max-glare": 1,
+	});        
     }
-</script>
-
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 </body>
 </html>
 

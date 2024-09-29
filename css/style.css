@@ -4,6 +4,9 @@ header{
     padding: 20px;
     border-radius: 30px;
     width: 100%;
+    box-shadow: -15px 17px 17px  rgba(10,10,10,0.25);
+      border: solid 3px #ffffff07;
+      border-radius: 30px;
 }
 
 /* body*/
@@ -63,7 +66,6 @@ header nav a h4{
     color: #fff;
     font-weight: 200;
     font-size: 1.2em;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 
@@ -87,23 +89,21 @@ header nav a h4{
        z-index:-1;
        margin: 0px;
        width: 100%;
+       filter: blur(3px);
     }
 
 
   #gradient-canvas  {
     display: block;
     width: inherit;
-      --gradient-color-1: #363636; 
-      --gradient-color-2: #6b6969; 
-      --gradient-color-3: #c7c7c7;  
+      --gradient-color-1: #3d3c3c; 
+      --gradient-color-2: #7a7a7a; 
+      --gradient-color-3: #b1b0b0;  
       --gradient-color-4: #dadada;
-      filter: blur(8px);
-      opacity: 0.8;
-
       aspect-ratio: auto 402/300;
     }
 
-    ccanvas {
+    canvas {
       overflow-clip-margin: content-box;
       overflow: clip;
   }
@@ -111,40 +111,83 @@ header nav a h4{
       .seccion_1 .texto {
         /*version sin vidrio*/
         margin-left: 45px;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
-        width: 50%; /* Ajusta el ancho del texto */
+        width: 60%; /* Ajusta el ancho del texto */
         display: flex;
         flex-direction: column; /* Apila los elementos del texto verticalmente */
         height: auto;
         padding: 30px;
+        border-radius: 30px;
       }
 
+   
 
- 
+/*mascarasvg*/
+
+.path_svg 
+{ 
+  width:668.42px;
+  height: 293.49px;
+  clip-path: polygon(633.76px 285.46px, 633.76px 285.46px, 619.80683px 290.98634px, 605.89944px 293.33112px, 591.57601px 292.99498px, 576.37472px 290.47856px, 559.83375px 286.2825px, 541.49128px 280.90744px, 520.88549px 274.85402px, 497.55456px 268.62288px, 471.03667px 262.71466px, 440.87px 257.63px, 440.87px 257.63px, 428.11853px 255.99735px, 415.86704px 254.7136px, 404.14091px 253.73705px, 392.96552px 253.026px, 382.36625px 252.53875px, 372.36848px 252.2336px, 362.99759px 252.06885px, 354.27896px 252.0028px, 346.23797px 251.99375px, 338.9px 252px, 338.9px 252px, 325.60072px 252.01246px, 312.50136px 252.08888px, 299.50664px 252.28782px, 286.52128px 252.66784px, 273.45px 253.2875px, 260.19752px 254.20536px, 246.66856px 255.47998px, 232.76784px 257.16992px, 218.40008px 259.33374px, 203.47px 262.03px, 203.47px 262.03px, 194.26265px 263.90183px, 185.4276px 265.77024px, 176.84935px 267.54961px, 168.4124px 269.15432px, 160.00125px 270.49875px, 151.5004px 271.49728px, 142.79435px 272.06429px, 133.7676px 272.11416px, 124.30465px 271.56127px, 114.29px 270.32px, 114.29px 270.32px, 108.05098px 269.22224px, 102.07944px 267.94832px, 96.40466px 266.53928px, 91.05592px 265.03616px, 86.0625px 263.48px, 81.45368px 261.91184px, 77.25874px 260.37272px, 73.50696px 258.90368px, 70.22762px 257.54576px, 67.45px 256.34px, 67.45px 256.34px, 62.19623px 253.99805px, 56.89104px 251.5748px, 51.57661px 249.02615px, 46.29512px 246.308px, 41.08875px 243.37625px, 35.99968px 240.1868px, 31.07009px 236.69555px, 26.34216px 232.8584px, 21.85807px 228.63125px, 17.66px 223.97px, 17.66px 223.97px, 12.49581px 216.86248px, 8.41408px 209.43264px, 5.29607px 201.66656px, 3.02304px 193.55032px, 1.47625px 185.07px, 0.53696px 176.21168px, 0.086429999999999px 166.96144px, 0.0059199999999996px 157.30536px, 0.17669px 147.22952px, 0.48px 136.72px, 0.48px 136.72px, 0.92318px 123.01338px, 1.44184px 110.49344px, 2.15166px 99.04906px, 3.16832px 88.56912px, 4.6075px 78.9425px, 6.58488px 70.05808px, 9.21614px 61.80474px, 12.61696px 54.07136px, 16.90302px 46.74682px, 22.19px 39.72px, 22.19px 39.72px, 31.68213px 30.06068px, 42.12784px 22.16824px, 53.30111px 15.85596px, 64.97592px 10.93712px, 76.92625px 7.225px, 88.92608px 4.53288px, 100.74939px 2.67404px, 112.17016px 1.46176px, 122.96237px 0.70932px, 132.9px 0.23px, 132.9px 0.23px, 150.02947px 0.0978px, 164.56376px 1.1644px, 177.23769px 3.2306px, 188.78608px 6.0972px, 199.94375px 9.565px, 211.44552px 13.4348px, 224.02621px 17.5074px, 238.42064px 21.5836px, 255.36363px 25.4642px, 275.59px 28.95px, 275.59px 28.95px, 306.64875px 32.29582px, 333.8864px 33.17936px, 357.85405px 32.36874px, 379.1028px 30.63208px, 398.18375px 28.7375px, 415.648px 27.45312px, 432.04665px 27.54706px, 447.9308px 29.78744px, 463.85155px 34.94238px, 480.36px 43.78px, 480.36px 43.78px, 487.05742px 48.35097px, 493.00496px 52.82696px, 498.41454px 57.14959px, 503.49808px 61.26048px, 508.4675px 65.10125px, 513.53472px 68.61352px, 518.91166px 71.73891px, 524.81024px 74.41904px, 531.44238px 76.59553px, 539.02px 78.21px, 539.02px 78.21px, 548.62353px 79.20606px, 557.32664px 79.11768px, 565.32511px 78.25302px, 572.81472px 76.92024px, 579.99125px 75.4275px, 587.05048px 74.08296px, 594.18819px 73.19478px, 601.60016px 73.07112px, 609.48217px 74.02014px, 618.03px 76.35px, 618.03px 76.35px, 623.54213px 78.54259px, 629.02504px 81.26312px, 634.39551px 84.48573px, 639.57032px 88.18456px, 644.46625px 92.33375px, 649.00008px 96.90744px, 653.08859px 101.87977px, 656.64856px 107.22488px, 659.59677px 112.91691px, 661.85px 118.93px, 661.85px 118.93px, 663.26031px 125.35933px, 663.47848px 131.08144px, 662.76737px 136.34851px, 661.38984px 141.41272px, 659.60875px 146.52625px, 657.68696px 151.94128px, 655.88733px 157.90999px, 654.47272px 164.68456px, 653.70599px 172.51717px, 653.85px 181.66px, 653.85px 181.66px, 655.01089px 191.73197px, 656.83472px 200.53176px, 659.08323px 208.28119px, 661.51816px 215.20208px, 663.90125px 221.51625px, 665.99424px 227.44552px, 667.55887px 233.21171px, 668.35688px 239.03664px, 668.15001px 245.14213px, 666.7px 251.75px, 666.7px 251.75px, 664.46546px 257.42993px, 661.57008px 262.54784px, 658.17322px 267.12191px, 654.43424px 271.17032px, 650.5125px 274.71125px, 646.56736px 277.76288px, 642.75818px 280.34339px, 639.24432px 282.47096px, 636.18514px 284.16377px, 633.74px 285.44px); 
+  background-color: #c7c7c7;
+}
 
 
-.seccion_1 .texto h1{
-    color: #fff;
-    background: linear-gradient(90deg, #ffffff, #07040D); /* Degradado de izquierda a derecha */
-    -webkit-background-clip: text; /* Aplica el degradado solo al texto */
-    background-clip: text; /* Standard property for compatibility */
-    -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente para que se vea el degradado */
-    font-weight: 400;
-   font-family:'Technos Regular';
-   font-weight:normal;
-   font-size: 4em;
+
+.seccion_1 .texto .explora {
+  position: relative;
+  padding: 20px; /* Añade espacio alrededor del texto */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
+  width: 100%; /* Aumenta el ancho del contenedor */
+  height: auto; /* Ajusta la altura automáticamente */
+  
+}
+
+/*mascaras de recorte*/
+.normal{
+  mask: url(../SVG/mascara_texto.svg); /* Aplica la máscara al pseudo-elemento */
+  mask-size: contain; /* Ajusta la máscara para que se ajuste al contenedor */
+  mask-position: center; /* Centra la máscara en el contenedor */
+  mask-repeat: no-repeat;
+}
+
+.inverted {
+  mask: 
+    url(../SVG/mascara_texto.svg) center/contain no-repeat,
+    linear-gradient(#000 0 0); /* we need this extra layer for mask-composite */
+  mask-composite: exclude;
+}
+
+
+
+
+.seccion_1 .texto h1 {
+  color: #fff;
+  background: linear-gradient(90deg, #ffffff, #07040D); /* Degradado de izquierda a derecha */
+  -webkit-background-clip: text; /* Aplica el degradado solo al texto */
+  background-clip: text; /* Standard property for compatibility */
+  -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente para que se vea el degradado */
+  font-weight: 400;
+  font-family: 'Technos Regular';
+  font-weight: normal;
+  font-size: 4em;
 }
 
 .seccion_1 .texto p{
   margin-top: -25px;
     font-family: 'JetBrains Mono', monospace;
     text-decoration: none;
-    text-shadow: 4px 4px 8px rgba(0,0,0,0.6);
     font-size: 1.5em;
     font-weight: 400;
     color: #fff;
     
+}
+
+
+
+img{
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(255, 255, 255, 0.5));
 }
 
 .seccion_1 .images {
@@ -348,11 +391,16 @@ width: 90%;
 
     /*efecto vidrio*/
     .glass{
-      background-color:#d9d9d900;
-      backdrop-filter: blur(25px);
-      box-shadow: -15px 17px 17px  rgba(10,10,10,0.25);
-      border: solid 3px #ffffff07;
-      border-radius: 30px;
+      background-color:#ffffff11;
+      backdrop-filter: blur(5px);
+      border-radius: 15px;
+        border-top: solid 3px #ffffff31;
+        border-right: solid 3px #ffffff31;
+        border-left:#0000004f; 
+        border-bottom:#0000004f; 
+        box-shadow: inset 11px -7px 19px 0px rgba(0, 0, 0, 0.25),
+        inset -11px 7px 19px 0px rgba(255, 255, 255, 0.25),
+        -15px 17px 17px  rgba(10, 10, 10, 0.137);
     }
 
     /*texto giratorio*/
@@ -383,7 +431,6 @@ width: 90%;
       font-family: 'JetBrains Mono', monospace;
       text-transform: uppercase;
       font-weight: 700;
-      color: #ffffff;
-      filter: blur(0.8px);
-      text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.6);
+      color: #ffffff;        
+      filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(20, 197, 241, 0.5));
     }
