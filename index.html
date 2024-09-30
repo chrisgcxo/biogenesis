@@ -14,9 +14,11 @@
 <div class="contenedor_header">
         <img src="images/logo(b).png" alt="logo" class="logo">
            <nav>
-               <a href="index.html"><h4>inicio</h4></a> 
-               <a href="implantes.html"><h4>implantes</h4></a>
-               <a href="nosotros".html"> <h4>nosotros</h4></a>
+            <ul>
+                <li><a href="index.html">inicio</a></li>
+                <li><a href="#">implantes</a></li>
+                <li><a href="#">nosotros</a></li>
+            </ul>
            </nav>
 </div>
 </header>
@@ -74,63 +76,123 @@
         </div>
         </section>
 
-        <section class="seccion_3">
+        <section class="seccion_3 ">
             <diV class="contenedor4y5">
                 <div class="contenedor_4">
                     <h3>ORGANIZADORA Y RESPONSABLE DE <br>
                         EVENTO: AMARA TORRADO</h3>
                 </div>
                 
-      <div class="contenedor_5 element element-4">
-        <img src="images/amara_frente.png" alt="amara_f" style="object-fit: cover;">
+      <div class="contenedor_5">
+        <img src="images/amara_frente.png" alt="amara_f" style="object-fit: contain;">
       </div>
             </div>
         </section>
 
         
-<!--script gradiente-->
+<!-- Script Gradiente -->
 <script type="module">
     import { Gradient } from './js/gradient.js'; 
-
-    const gradient = new Gradient();
-    const canvas = document.getElementById('gradient-canvas');
-    canvas.width = window.innerWidth; // Set the width to the window's width
-    canvas.height = window.innerHeight; // Set the height to the window's height
-    gradient.initGradient('#gradient-canvas'); 
-  </script>   
-
-        <!--copiar el height de un div y pegarlo en otro-->
-        <script>
-            window.addEventListener('load', () => {
-                const header = document.querySelector('header');
-                const headerHeight = header.offsetHeight;
-                const headerMarginBottom = parseFloat(window.getComputedStyle(header).marginBottom);
-                const section1Height = document.querySelector('.seccion_1').offsetHeight;
-                const totalHeight = headerHeight + headerMarginBottom + section1Height;
-                document.getElementById('gradient-canvas').style.height = `${totalHeight}px`;
-            });
-
-            /*texto giratorio*/
-            const str = "NUEVO MODELO XR_20G-NUEVO MODELO";
-    const text = document.getElementById("text");
-    window.onload = function(){
-        for (let i = 0; i < str.length; i++) {
-            let span = document.createElement('span');
-            span.innerHTML = str[i] 
-            text.appendChild(span);
-            console.log(str[i])
-            span.style.transform = `rotate(${11*i}deg)`;
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      const gradient = new Gradient();
+      const canvas = document.getElementById('gradient-canvas');
+  
+      function adjustCanvasSize() {
+        canvas.width = window.innerWidth; 
+        canvas.height = window.innerHeight; 
+        gradient.initGradient('#gradient-canvas');
+      }
+  
+      // Inicializar el canvas al cargar
+      adjustCanvasSize();
+  
+      // Ajustar el tamaño del canvas al redimensionar la ventana
+      window.addEventListener('resize', adjustCanvasSize);
+    });
+  </script>
+  
+  <!-- Copiar el height de un div y aplicarlo en otro -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Ajustar la altura del canvas en función de la altura del header y de la primera sección
+      function adjustCanvasHeight() {
+        const header = document.querySelector('header');
+        const section1 = document.querySelector('.seccion_1');
+        const canvas = document.getElementById('gradient-canvas');
+  
+        if (header && section1 && canvas) {
+          const headerHeight = header.offsetHeight;
+          const headerMarginBottom = parseFloat(window.getComputedStyle(header).marginBottom);
+          const section1Height = section1.offsetHeight;
+          const totalHeight = headerHeight + headerMarginBottom + section1Height;
+          canvas.style.height = `${totalHeight}px`;
         }
-        /*card texto hover*/
-        VanillaTilt.init(document.querySelector(".texto"), {
-		max: 10,
-		speed: 200,
-		glare: true,
-		"max-glare": 1,
-	});        
+      }
+  
+      // Ejecutar la función al cargar la página
+      adjustCanvasHeight();
+    });
+  </script>
+  
+  <!-- Texto Giratorio y Vanilla Tilt -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const str = "NUEVO MODELO XR_20G-NUEVO MODELO";
+      const textContainer = document.getElementById("text");
+  
+      function createRotatingText() {
+        if (textContainer) {
+          for (let i = 0; i < str.length; i++) {
+            const span = document.createElement('span');
+            span.innerHTML = str[i];
+            textContainer.appendChild(span);
+            span.style.transform = `rotate(${11 * i}deg)`;
+          }
+        }
+      }
+  
+      function applyVanillaTilt() {
+        if (window.innerWidth >= 1000) {
+          VanillaTilt.init(document.querySelectorAll(".container_img1, .container_fede, .contenedor_5"), {
+            max: 5,
+            speed: 200,
+            glare: true,
+            "max-glare": 1,
+          });
+        }
+      }
+
+        // Eliminar estilos  en función de una clase en pantallas pequeñas
+        function eliminarclase(classNameToRemove, classNameToKeep) {
+    const elements = document.querySelectorAll(`.${classNameToKeep}.${classNameToRemove}`);
+    
+    if (window.innerWidth < 1000) {
+        elements.forEach(element => {
+            // Elimina la clase 'glass' solo si está presente
+            element.classList.remove(classNameToRemove);
+        });
     }
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+}
+  
+      // Ejecutar las funciones
+      createRotatingText();
+      applyVanillaTilt();
+      eliminarclase('glass', 'texto');
+      // Recalcular el efecto Tilt en redimensionar
+      window.addEventListener('resize', applyVanillaTilt);
+      window.addEventListener('resize', () => {
+        eliminarclase('glass', 'texto');
+});
+    });
+
+
+
+  </script>
+  
+  <!-- Vanilla Tilt Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  
 </body>
 </html>
 
