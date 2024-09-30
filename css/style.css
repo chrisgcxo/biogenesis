@@ -6,8 +6,10 @@ header{
     height: 80px;
     padding: 20px;
     width: 100%;
+    padding: 0px;
+    margin: 0px;
     border: solid 13px #ffffff07;
-    inset 11px -7px 19px 0px rgb(0 0 0 / 20%), inset -11px 7px 19px 0px rgb(255 255 255 / 11%), -15px 17px 17px rgb(10 10 10 / 8%)
+   box-shadow:  inset 11px -7px 19px 0px rgb(0 0 0 / 20%), inset -11px 7px 19px 0px rgb(255 255 255 / 11%), -15px 17px 17px rgb(10 10 10 / 8%);
 }
 
 /* body*/
@@ -20,7 +22,7 @@ margin: 0px;
 padding: 0px;
 align-items: center;
 justify-content: center;
-overflow-x: hidden;
+overflow-x: clip;
 }
 
 @font-face {
@@ -442,6 +444,10 @@ background-color: #d9d9d9 ;
 
   .seccion_1 .texto p {
     font-size: 1.2em;
+  }
+
+  .seccion_1 .images {
+    overflow: hidden;
   }
   /*seccion2*/
 
