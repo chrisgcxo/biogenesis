@@ -260,6 +260,7 @@ width: 90%;
     display: flex;
     justify-content: center;
     border-radius: 30px;
+    overflow: hidden;
   }
 
 .placeholder{
@@ -322,6 +323,7 @@ width: 90%;
 background-color: #d9d9d9 ;
     overflow: hidden;
     mask-image: url(../SVG/Vector.svg);
+    mask-repeat: no-repeat;
     outline: 3px solid #ffffff07; 
 
     }
@@ -412,6 +414,8 @@ background-color: #d9d9d9 ;
 
   header img{
     margin-left: 0px;
+    width: 100px;
+    height: 100px;
   }
 
   
