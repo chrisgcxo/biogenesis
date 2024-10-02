@@ -432,7 +432,7 @@ background-color: #d9d9d9 ;
   .seccion_1 .images {
     overflow: hidden;
     background: antiquewhite;
-    z-index: 0;
+    z-index: -1;
     mask-image: url(../SVG/Vector.svg);
   }
 
@@ -442,6 +442,7 @@ background-color: #d9d9d9 ;
 
   .seccion_3 {
     padding-top: 0px;
+    width: 100%;
   }
 
 .seccion_3 .contenedor_4 {
