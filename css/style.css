@@ -203,7 +203,7 @@ img.amara_1 {
     width: 100%;
     height: 100%;
     padding-bottom: 50px;
-    background-color:#ececec;
+    background: linear-gradient(to right, rgb(211, 204, 227), rgb(233, 228, 240));
   }
 
 
@@ -255,12 +255,20 @@ width: 90%;
   }
 
   .seccion_2 .container_img1{
+    position: relative;
     margin-top:5px;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
     border-radius: 30px;
     overflow: hidden;
+  }
+
+  .seccion_2 .container_img1:hover{
+    #img1{ 
+      visibility: visible;
+      opacity: 1;
+    }
   }
 
 .placeholder{
@@ -279,14 +287,53 @@ width: 90%;
 
 
     .seccion_2 .container_fede{
+      position: relative;
         display: flex;
         justify-content: center;
-        width:40%;
         border-radius: 30px;
         overflow: hidden;
         margin-top: 45px;
         margin-left: 20px;
+        width: 40%;
       }
+
+      .seccion_2 .container_fede:hover {
+        
+        #img2{ 
+          visibility: visible;
+            opacity: 1;
+        }
+      }
+
+      /*redes sociales*/
+      .social-media{
+        visibility: hidden;
+        opacity: 0;
+        transition: 
+            visibility 0.5s, opacity 0.5s ease-in-out;
+        left: 0px;
+        bottom: 0px;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        justify-content: space-around;
+        position: absolute;
+        z-index: 1;
+      }
+      .social-media a i{
+        position: relative;
+        margin: 9px;
+        color: #7a7a7a;
+        font-size: 2em;
+        transition: all 0.5s ease;
+        padding: 7px;
+      }
+
+      .social-media a i:hover{
+        transform: translateY(-20px);
+      }
+
+      /*brillo botones*/
     
 
 /*seccion 3*/
@@ -319,13 +366,20 @@ width: 90%;
  }
 
  .seccion_3 .contenedor_5{
+  position: relative;
     margin-top:100px;
 background-color: #d9d9d9 ;
     overflow: hidden;
     mask-image: url(../SVG/Vector.svg);
     mask-repeat: no-repeat;
     outline: 3px solid #ffffff07; 
+    }
 
+    .seccion_3 .contenedor_5:hover{
+      #img3{ 
+        visibility: visible;
+          opacity: 1;
+      }
     }
 
     /*neumorfismo*/
@@ -408,6 +462,7 @@ background-color: #d9d9d9 ;
     /*responsive*/
     
 @media screen and (max-width: 1000px) {
+
   .deskwrapper{
     display: none;
   }
@@ -427,6 +482,7 @@ background-color: #d9d9d9 ;
   }
   .seccion_1 .texto h1 {
     font-size: 3em;
+  
   }
 
   .seccion_1 .texto p {
@@ -435,12 +491,17 @@ background-color: #d9d9d9 ;
 
   .seccion_1 .images {
     overflow: hidden;
-    background: antiquewhite;
+    background:#ffffff11;
+    backdrop-filter: blur(5px);
     z-index: -1;
     mask-image: url(../SVG/Vector.svg);
   }
 
   /*seccion2*/
+  
+  .social-media a i:hover{
+    transform: translateY(0px);
+  }
 
   /*seccion 3*/
 
