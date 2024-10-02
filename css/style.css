@@ -439,10 +439,24 @@ background-color: #d9d9d9 ;
   /*seccion2*/
 
   /*seccion 3*/
+
+  .seccion_3 {
+    padding-top: 0px;
+  }
+
 .seccion_3 .contenedor_4 {
-  margin-left: 0px;
+  margin-left: 20px;
 }
 
+
+.seccion_3 .contenedor4y5 {
+  flex-direction: column;
+}
+
+
+.seccion_3 .contenedor_5 {
+  margin-top: 0px;
+}
   /*ocultar cosas*/
 
   .seccion_2 .container_fede{
