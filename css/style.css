@@ -409,6 +409,11 @@ background-color: #d9d9d9 ;
   .deskwrapper{
     display: none;
   }
+
+  header img{
+    margin-left: 0px;
+  }
+
   
 /*seccion1*/
   .seccion_1 .texto {
@@ -434,7 +439,9 @@ background-color: #d9d9d9 ;
   /*seccion2*/
 
   /*seccion 3*/
-
+.seccion_3 .contenedor_4 {
+  margin-left: 0px;
+}
 
   /*ocultar cosas*/
 
