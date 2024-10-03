@@ -69,6 +69,18 @@ header nav a{
     font-size: 1.15em;
   
 }
+/*efecto hover*/
+#glow {
+  transition: .5s ease-in-out;
+  text-shadow: 0 0 0 transparent, 0 0 0 transparent;
+  color:rgba(0,0,0,.1);
+  overflow:visible;
+  &:hover {
+    color:white;
+    text-shadow: 0 0 5px #b0e0e6, 0 0 10px #add8e6, 0 0 15px #87ceeb, 0 0 20px #87cefa;
+    transform: translateY(-5px);
+  }
+}
 
 ul{
   list-style: none;
@@ -128,8 +140,7 @@ ul{
         height: auto;
         padding: 20px;
         border-radius: 30px;
-        box-shadow:   -15px 17px 17px rgb(10 10 10 / 3%)
-
+        box-shadow:   -15px 17px 17px rgb(10 10 10 / 3%);
       }
 
    
@@ -290,13 +301,14 @@ width: 90%;
       position: relative;
         display: flex;
         justify-content: center;
-        border-radius: 30px;
         overflow: hidden;
         margin-top: 45px;
         margin-left: 20px;
         width: 40%;
+        border-radius: 30px;
       }
 
+      /*hover redes 2*/
       .seccion_2 .container_fede:hover {
         
         #img2{ 
@@ -305,7 +317,7 @@ width: 90%;
         }
       }
 
-      /*redes sociales*/
+      /*redes sociales desktop*/
       .social-media{
         visibility: hidden;
         opacity: 0;
@@ -351,7 +363,12 @@ width: 90%;
         top:100px; 
         left: 70px;
       }
-      /*brillo botones*/
+
+      /*ocultar redes mobile*/
+      .social_mobile{
+        display: none;
+        position: absolute;
+      }
     
 
 /*seccion 3*/
@@ -435,7 +452,6 @@ background-color: #d9d9d9 ;
     .glass{
       background-color:#ffffff11;
       backdrop-filter: blur(5px);
-      border-radius: 15px;
         border-top: solid 3px #ffffff31;
         border-right: solid 3px #ffffff31;
         border-left:#0000004f; 
@@ -515,22 +531,42 @@ background-color: #d9d9d9 ;
   }
 
   /*seccion2*/
+/*imagenes*/
+.seccion_2 .container_img1 {
+  margin-bottom: 0px;
+}
+/*social media*/
+/*ocultar desktop*/
+#img1,#img2,#img3 {
+  display: none;
+  }
 
-  .media{
-    box-shadow: none;
-    backdrop-filter: none;
-    background-color: #00000000;
-    border: none;
-  }
-  i{
-    backdrop-filter:drop-shadow(0.35rem 0.35rem 0.4rem rgba(7, 7, 7, 0.5));
-  }
-  .social-media a i:hover{
-    transform: translateY(0px);
-  }
+/*mostrar mobile*/
+.social_mobile{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  padding: 5px;
+  position: relative;
+  border-radius: 10px;
+margin-top: 5px;
+}
+
+.media_mobile{
+  margin:0px 0px 0px 8px;
+}
+
+.social_mobile .media_mobile a i{
+  color: #7a7a7a;
+  font-size: 1.8em;
+  backdrop-filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(34, 34, 34, 0.5));
+}
+/*foto1*/
+#img1_mobile{
+  justify-content: flex-start;
+}
 
   /*seccion 3*/
-
   .seccion_3 {
     padding-top: 0px;
     width: 100%;
@@ -550,6 +586,12 @@ background-color: #d9d9d9 ;
   margin-top: 0px;
   width: 100%;
 }
+
+/*foto2*/
+#img2_mobile{
+  justify-content: flex-end;
+}
+
   /*ocultar cosas*/
 
   .seccion_2 .container_fede{
