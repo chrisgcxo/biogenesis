@@ -32,7 +32,8 @@ overflow-x: clip;
 
     
  /*HEADER*/   
-header .contenedor_header{
+
+.deskwrapper{
   width: 100%;
   height: 100%;
   display: flex;
@@ -88,6 +89,12 @@ ul{
   justify-content: center;/* Distributes items evenly with space between them */
   align-items: center; /* Aligns items vertically in the center */
   margin:auto;
+}
+
+
+/*esconder mobile*/
+.mobilewrapper{
+  display: none;
 }
 
 
@@ -497,8 +504,83 @@ background-color: #d9d9d9 ;
     
 @media screen and (max-width: 1000px) {
 
+  /*nav*/
+
+
   .deskwrapper{
     display: none;
+  }
+
+  /*menu hamburguesa*/
+
+  .mobilewrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mobilewrapper .contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+justify-content: center;
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 120px;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.219);
+    border-radius: 0 0 20px 20px
+  }
+
+  .overlay-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 90%;
+    overflow-y: hidden;
+  }
+
+  .overlay-content .c1 {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    align-items: center;
+  }
+
+  .overlay-content a{
+    font-family: 'JetBrains Mono', monospace;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+  }
+  .overlay-content #links {
+    backdrop-filter: blur(5px);
+    background-color: #ffffff42;
+    border: 1px solid #ffffff11;
+
+  }
+
+  .overlay-content #links:hover {
+    background-color: #00000042;
+  }
+
+  .overlay-content #links:active {
+    background-color: #00000042;
+  }
+
+  .mobilewrapper i{
+    font-size: 2em;
+    color: #fff;
   }
 
   header img{
@@ -561,6 +643,7 @@ margin-top: 5px;
   font-size: 1.8em;
   backdrop-filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(34, 34, 34, 0.5));
 }
+
 /*foto1*/
 #img1_mobile{
   justify-content: flex-start;
@@ -600,4 +683,4 @@ margin-top: 5px;
 
 }
 
-/*menu hamburguesa*/
+

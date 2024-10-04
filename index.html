@@ -18,16 +18,29 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <header class="glass">
-<div class="contenedor_header">
-        <img src="images/logo(b).png" alt="logo">
            <nav class="deskwrapper">
+            <img src="images/logo(b).png" alt="logo">
             <ul>
                 <li id="glow"><a href="index.html">inicio</a></li>
                 <li id="glow"><a href="index.html">implantes</a></li>
                 <li id="glow"><a href="index.html">nosotros</a></li>
             </ul>
            </nav>
-</div>
+            <div class="mobilewrapper">
+              <img src="images/logo(b).png" alt="logo">
+              <i class="fas fa-bars"  style="margin: 15px;" onclick="openNav()"></i>
+              <div class="contents" id="myNav">
+                <div class="overlay-content">
+               <i class="fas fa-times" style="margin: 5px;" onclick="closeNav()"></i>
+                  <div class="c1">
+                    <a href="index.html" id="links">inicio</a>
+                    <a href="index.html" id="links">implantes</a>
+                    <a href="index.html" id="links">nosotros</a>
+                  </div>
+                </div>
+              </div>
+        
+            </div>              
 </header>
 
 <body>
@@ -189,6 +202,16 @@
   
   <!-- Texto Giratorio y Vanilla Tilt -->
   <script>
+  //abrir  y cerrar barra nav-mobile
+  function openNav() {
+  document.getElementById("myNav").style.height = "150%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+
+//texto giratorio
     document.addEventListener('DOMContentLoaded', () => {
       const str = "NUEVO MODELO XR_20G-NUEVO MODELO";
       const textContainer = document.getElementById("text");
@@ -203,7 +226,8 @@
           }
         }
       }
-  
+      
+  //hover fotos
       function applyVanillaTilt() {
         if (window.innerWidth >= 1000) {
           VanillaTilt.init(document.querySelectorAll(".container_img1, .container_fede, .contenedor_5"), {
