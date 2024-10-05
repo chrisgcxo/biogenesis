@@ -578,6 +578,7 @@ background-color: #d9d9d9 ;
     width: 100%;
     padding: 8px;
   }
+
   .overlay-content #links {
     background-color: #ffffff42;
     border: 1px solid #ffffff11;
@@ -590,10 +591,18 @@ background-color: #d9d9d9 ;
     background-color: #00000042;
   }
 
+  /*iconos mobile*/
+  /*font awesome*/
   .mobilewrapper i{
     font-size: 2em;
     color: #fff;
   }
+
+  /*google*/
+
+
+
+
 
   header img{
     margin-left: 0px;
