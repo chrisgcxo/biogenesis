@@ -677,9 +677,7 @@ display: none;
   width: 99%;
   padding: 10px;
   position: relative;
-  border-radius: 10px;
   margin-top: 15px;
-  box-shadow: 12px 12px 16px 0 rgb(0 0 0 / 15%) inset, -8px -8px 12px 0 rgb(255 255 255 / 15%) inset;
 }
 
 .media_mobile{
@@ -701,6 +699,9 @@ display: none;
 
 .seccion_2 h3 {
   font-size: 1.05em;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 12px 12px 16px 0 rgb(0 0 0 / 11%) inset, -8px -8px 12px 0 rgb(255 255 255 / 10%) inset;
 }
 
   /*seccion 3*/
