@@ -631,7 +631,7 @@ background-color: #d9d9d9 ;
 
   .seccion_1 .texto p{
     margin: 0px;
-    font-size: 1.05em;
+    font-size: 1.08em;
   padding: 15px;
   word-spacing: -5px;
   }
@@ -685,6 +685,11 @@ margin-top: 5px;
 /*foto1*/
 #img1_mobile{
   justify-content: flex-start;
+}
+/*texto*/
+}
+.seccion_2 h3 {
+  font-size: 1.05em;
 }
 
   /*seccion 3*/
