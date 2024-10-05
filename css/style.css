@@ -609,7 +609,6 @@ background-color: #d9d9d9 ;
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 50px;
-    padding-bottom: 50px;
   }
 
   /*texto*/
@@ -624,13 +623,14 @@ background-color: #d9d9d9 ;
   .seccion_1 .texto h1{
     font-size: 2.5em;
     padding: 15px;
-    text-align: end;
+    margin: 0px;
   }
 
   .seccion_1 .texto p{
     margin: 0px;
     font-size: 1.05em;
-    padding: 15px;
+    margin-top: 50px;
+    padding: 15px 15px 50px 15px;
   }
 
 /*imagenes*/
