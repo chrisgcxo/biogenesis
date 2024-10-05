@@ -3,6 +3,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
 
 /*header*/
 header{
@@ -608,7 +609,7 @@ background-color: #d9d9d9 ;
     background-position: 120px 0px;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 80px;
+    margin-top: 0px;
     padding-bottom:80px;
   }
 
@@ -685,8 +686,9 @@ margin-top: 5px;
 #img1_mobile{
   justify-content: flex-start;
 }
-/*texto*/
-}
+
+
+
 .seccion_2 h3 {
   font-size: 1.05em;
 }
@@ -695,6 +697,10 @@ margin-top: 5px;
   .seccion_3 {
     padding-top: 0px;
     width: 100%;
+  }
+
+  .seccion_3 h3 {
+    font-size: 1.05em;
   }
 
 .seccion_3 .contenedor_4 {
