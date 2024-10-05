@@ -1,3 +1,10 @@
+/* Aplicar box-sizing a todos los elementos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /*header*/
 header{
   display: inline-flex;
@@ -18,17 +25,15 @@ header{
   }
 
 
-/* body*/
-body{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-margin: 0px;
-padding: 0px;
-align-items: center;
-justify-content: center;
-overflow-x: clip;
+
+
+/* body */
+body {
+  margin: 0; /* Eliminar márgenes por defecto */
+  padding: 0; /* Eliminar padding por defecto */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  height: auto; /* La altura se ajusta automáticamente al contenido */
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -515,7 +520,6 @@ background-color: #d9d9d9 ;
 
   /*nav*/
 
-
   .deskwrapper{
     display: none;
   }
@@ -604,6 +608,8 @@ background-color: #d9d9d9 ;
     background-position: 120px 0px;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 50px;
+    padding-bottom: 50px;
   }
 
   /*texto*/
@@ -618,6 +624,7 @@ background-color: #d9d9d9 ;
   .seccion_1 .texto h1{
     font-size: 2.5em;
     padding: 15px;
+    text-align: end;
   }
 
   .seccion_1 .texto p{
