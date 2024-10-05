@@ -7,9 +7,9 @@ header{
     width: 100%;
     padding: 0px;
     margin: 0px;
-    border: solid 13px #ffffff07;
+    border: solid 1px #ffffff07;
    box-shadow:  inset 11px -7px 19px 0px rgb(0 0 0 / 20%), inset -11px 7px 19px 0px rgb(255 255 255 / 11%), -15px 17px 17px rgb(10 10 10 / 8%);
-}
+  }
 
 /* body*/
 body{
@@ -114,6 +114,8 @@ ul{
     .gradient{
       position: absolute; 
       top:0px;
+      left: 0px;
+      padding: 0px;
        z-index:-1;
        margin: 0px;
        width: 100%;
@@ -122,13 +124,10 @@ ul{
 
 
   #gradient-canvas  {
-    display: block;
-    width: inherit;
       --gradient-color-1: #3d3c3c; 
       --gradient-color-2: #7a7a7a; 
       --gradient-color-3: #b1b0b0;  
       --gradient-color-4: #dadada;
-      aspect-ratio: auto 402/300;
     }
 
     canvas {
@@ -468,6 +467,7 @@ background-color: #d9d9d9 ;
         -15px 17px 17px  rgba(10, 10, 10, 0.137);
     }
 
+ 
     /*texto giratorio*/
     tg {
       height: 200px; /* Increase the height */
@@ -489,7 +489,7 @@ background-color: #d9d9d9 ;
       }
     }
 
-    span {
+   span {
       position: absolute;
       left: 50%;
       transform-origin: 0px 100px; /* Adjust the transform-origin to match the new size */
@@ -499,10 +499,11 @@ background-color: #d9d9d9 ;
       color: #ffffff;        
       filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(20, 197, 241, 0.5));
     }
-  
+
     /*responsive*/
     
 @media screen and (max-width: 1000px) {
+
 
   /*nav*/
 
@@ -522,21 +523,23 @@ background-color: #d9d9d9 ;
     height: 100%;
   }
 
-  .mobilewrapper .contents{
+ 
+  .mobilewrapper .contents {
     display: flex;
+    visibility: hidden;
     flex-direction: column;
     align-items: center;
-justify-content: center;
-    height: 0%;
+    justify-content: center;
     width: 100%;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     top: 120px;
+    backdrop-filter: blur(5px);
+    background-color: #03030341;
     transition: 0.5s;
-    background-color: rgba(0, 0, 0, 0.219);
-    border-radius: 0 0 20px 20px
+    border-radius: 0 0 20px 20px;
   }
-
+  
   .overlay-content {
     display: flex;
     align-items: center;
@@ -564,15 +567,12 @@ justify-content: center;
     padding: 5px;
   }
   .overlay-content #links {
-    backdrop-filter: blur(5px);
     background-color: #ffffff42;
     border: 1px solid #ffffff11;
-
   }
 
-  .overlay-content #links:hover {
-    background-color: #00000042;
-  }
+  
+
 
   .overlay-content #links:active {
     background-color: #00000042;
@@ -589,27 +589,48 @@ justify-content: center;
     height: 100px;
   }
 
-  
-/*seccion1*/
-  .seccion_1 .texto {
-    align-items: flex-start;
+  /*seccion1*/
+  .seccion_1{
+    flex-direction: column;
+    background-image: url(../images/img_mujer3.png);
+    background-position: 120px 0px;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*texto*/
+  .seccion_1 .texto{
     box-shadow: none;
-    margin-left: 0px;
-  }
-  .seccion_1 .texto h1 {
-    font-size: 3em;
-  
-  }
-
-  .seccion_1 .texto p {
-    font-size: 1.2em;
+    align-items: flex-start;
+    margin-top: 120px;
+    width: 100%;
+    padding: 0px;
   }
 
-  .seccion_1 .images {
-    overflow: hidden;
-    background:rgb(252, 240, 226);
-    z-index: -1;
-    mask-image: url(../SVG/Vector.svg);
+  .seccion_1 .texto h1{
+    font-size: 2.5em;
+    padding: 15px;
+  }
+
+  .seccion_1 .texto p{
+    margin: 0px;
+    font-size: 1.05em;
+    padding: 15px;
+  }
+
+/*imagenes*/
+.seccion_1 .images{
+display: none;
+}
+
+.seccion_1 .amara_1{
+  top:0px;
+  left: 0px;
+}
+  /*ocultar texto giratorio*/
+  span {
+    display: none;
   }
 
   /*seccion2*/

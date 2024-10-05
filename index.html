@@ -16,8 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 <!--iconos-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!--cambiar por los de google que son clase span-->
 </head>
-<header class="glass">
+<header>
            <nav class="deskwrapper">
             <img src="images/logo(b).png" alt="logo">
             <ul>
@@ -45,15 +46,13 @@
 
 <body>
     <div class="gradient">
-        <canvas id="gradient-canvas" data-transition-in/>
+      <canvas id="gradient-canvas" data-transition-in="" style="width: 100%; height: auto; " class="isLoaded"></canvas>
+
     </div>
 
     <section class="seccion_1">
 <div class="texto glass">
-            <h1 >explora <br>
-                mas alla de <br>
-                lo ordinario
-            </h1>
+            <h1 id="t1"></h1>
     <p>
         Creemos en un futuro donde cada <br>
         individuo tenga el poder de <br>
@@ -155,30 +154,77 @@
         </section>
 
         
-<!-- Script Gradiente -->
-<script type="module">
-    import { Gradient } from './js/gradient.js'; 
-  
-    document.addEventListener('DOMContentLoaded', () => {
-      const gradient = new Gradient();
-      const canvas = document.getElementById('gradient-canvas');
-  
-      function adjustCanvasSize() {
-        canvas.width = window.innerWidth; 
-        canvas.height = window.innerHeight; 
-        gradient.initGradient('#gradient-canvas');
-      }
-  
-      // Inicializar el canvas al cargar
-      adjustCanvasSize();
-  
-      // Ajustar el tamaño del canvas al redimensionar la ventana
-      window.addEventListener('resize', adjustCanvasSize);
-    });
-  </script>
+        <script type="module">
+          import { Gradient } from './js/gradient.js'; 
+        
+          document.addEventListener('DOMContentLoaded', () => {
+            const gradient = new Gradient();
+            const canvas = document.getElementById('gradient-canvas');
+            const header = document.querySelector('header');
+            const section1 = document.querySelector('.seccion_1');
+        
+            function getTotalHeight(element) {
+              let totalHeight = 0;
+              const children = element.children;
+        
+              for (let i = 0; i < children.length; i++) {
+                const child = children[i];
+                const childStyles = window.getComputedStyle(child);
+                
+                // Sumar la altura del elemento hijo
+                totalHeight += child.offsetHeight;
+                
+                // Sumar el margen superior e inferior
+                totalHeight += parseFloat(childStyles.marginTop) + parseFloat(childStyles.marginBottom);
+              }
+        
+              // También incluir el padding del elemento contenedor
+              const containerStyles = window.getComputedStyle(element);
+              totalHeight += parseFloat(containerStyles.paddingTop) + parseFloat(containerStyles.paddingBottom);
+        
+              return totalHeight;
+            }
+        
+            function adjustCanvasSize() {
+              // Obtener la altura total de header y section1
+              const headerHeight = getTotalHeight(header);
+              const section1Height = getTotalHeight(section1);
+        
+              // Sumar la altura total
+              const totalHeight = headerHeight + section1Height;
+        
+              // Ajustar el tamaño del canvas basado en el ancho de la ventana y la altura combinada
+              canvas.width = window.innerWidth;
+              canvas.height = totalHeight;
+        
+              // Inicializar el gradiente en el canvas
+              gradient.initGradient('#gradient-canvas');
+            }
+        
+            // Inicializar el canvas al cargar
+            adjustCanvasSize();
+        
+            // Ajustar el tamaño del canvas al redimensionar la ventana
+            window.addEventListener('resize', adjustCanvasSize);
+          });
+        </script>
   
   <!-- Copiar el height de un div y aplicarlo en otro -->
   <script>
+ // Función para inyectar el texto con diferentes saltos de línea
+ function ajustarSaltosDeLinea() {
+      const h1 = document.getElementById('t1');
+      const screenWidth = window.innerWidth;
+
+      // Si la pantalla es menor o igual a 600px (móvil)
+      if (screenWidth <= 1000) {
+          h1.innerHTML = "explora <br> mas alla de lo <br> ordinario";
+      } else {
+          // Si es una pantalla más grande (desktop/tablet)
+          h1.innerHTML = "explora <br> mas alla <br> de lo <br>ordinario";
+      }
+  }
+
     document.addEventListener('DOMContentLoaded', () => {
       // Ajustar la altura del canvas en función de la altura del header y de la primera sección
       function adjustCanvasHeight() {
@@ -204,11 +250,13 @@
   <script>
   //abrir  y cerrar barra nav-mobile
   function openNav() {
-  document.getElementById("myNav").style.height = "150%";
+  document.getElementById("myNav").style.height = "30%";
+  document.getElementById("myNav").style.visibility = "visible";
 }
 
 function closeNav() {
   document.getElementById("myNav").style.height = "0%";
+  document.getElementById("myNav").style.visibility = "hidden";
 }
 
 //texto giratorio
@@ -254,7 +302,11 @@ function closeNav() {
    
   
       // Ejecutar las funciones
-      createRotatingText();
+      if(window.innerWidth >= 1000){
+        createRotatingText();
+      }
+
+      ajustarSaltosDeLinea();
       applyVanillaTilt();
       eliminarclase('glass', 'texto');
       // Recalcular el efecto Tilt en redimensionar
