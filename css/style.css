@@ -710,12 +710,15 @@ margin-top: 5px;
 
 .seccion_3 .contenedor4y5 {
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 
 .seccion_3 .contenedor_5 {
   margin-top: 0px;
   width: 100%;
+  height: 60%;
 }
 
 /*foto2*/
