@@ -610,6 +610,7 @@ background-color: #d9d9d9 ;
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 60px;
+    padding-bottom:60px;
   }
 
   /*texto*/
@@ -618,6 +619,9 @@ background-color: #d9d9d9 ;
     box-shadow: none;
     width: 90%;
     padding: 15px;
+    background: #12121209;
+    backdrop-filter: blur(1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .seccion_1 .texto h1{
