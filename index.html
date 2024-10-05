@@ -156,55 +156,32 @@
         
         <script type="module">
           import { Gradient } from './js/gradient.js'; 
-        
+
           document.addEventListener('DOMContentLoaded', () => {
             const gradient = new Gradient();
             const canvas = document.getElementById('gradient-canvas');
             const header = document.querySelector('header');
             const section1 = document.querySelector('.seccion_1');
-        
+
             function getTotalHeight(element) {
-              let totalHeight = 0;
-              const children = element.children;
-        
-              for (let i = 0; i < children.length; i++) {
-                const child = children[i];
-                const childStyles = window.getComputedStyle(child);
-                
-                // Sumar la altura del elemento hijo
-                totalHeight += child.offsetHeight;
-                
-                // Sumar el margen superior e inferior
-                totalHeight += parseFloat(childStyles.marginTop) + parseFloat(childStyles.marginBottom);
-              }
-        
-              // También incluir el padding del elemento contenedor
-              const containerStyles = window.getComputedStyle(element);
-              totalHeight += parseFloat(containerStyles.paddingTop) + parseFloat(containerStyles.paddingBottom);
-        
+              let totalHeight = element.offsetHeight;
+              const styles = window.getComputedStyle(element);
+              totalHeight += parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
               return totalHeight;
             }
-        
+
             function adjustCanvasSize() {
-              // Obtener la altura total de header y section1
               const headerHeight = getTotalHeight(header);
               const section1Height = getTotalHeight(section1);
-        
-              // Sumar la altura total
               const totalHeight = headerHeight + section1Height;
-        
-              // Ajustar el tamaño del canvas basado en el ancho de la ventana y la altura combinada
-              canvas.width = window.innerWidth;
-              canvas.height = totalHeight;
-        
-              // Inicializar el gradiente en el canvas
+
+              canvas.style.width = '100%';
+              canvas.style.height = `${totalHeight}px`;
+
               gradient.initGradient('#gradient-canvas');
             }
-        
-            // Inicializar el canvas al cargar
+
             adjustCanvasSize();
-        
-            // Ajustar el tamaño del canvas al redimensionar la ventana
             window.addEventListener('resize', adjustCanvasSize);
           });
         </script>

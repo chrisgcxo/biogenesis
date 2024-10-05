@@ -119,7 +119,7 @@ ul{
        z-index:-1;
        margin: 0px;
        width: 100%;
-       filter: blur(3px);
+       filter: blur(2px);
     }
 
 
@@ -603,7 +603,7 @@ background-color: #d9d9d9 ;
     margin-left: 0px;
     box-shadow: none;
     align-items: center;
-    width: 80%;
+    width: 90%;
     padding: 0px;
   }
 
