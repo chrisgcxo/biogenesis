@@ -91,7 +91,7 @@
                             </div>
                             </div>
                             <span class="mobilewrap" id="wrap1">
-                              <span class="material-symbols-outlined" style="font-size: 1.5em;filter:none;color: #5c5a5a;position: static;">
+                              <span class="material-symbols-outlined" onclick="togglesocial('img1_mobile')" style="font-size: 1.5em;filter:none;color: #5c5a5a;position: static;" >
                                 more_vert
                                 </span>
                                 <!--redes mobile-->
@@ -151,11 +151,11 @@
           <img src="images/amara_frente.png" alt="amara_f" id="amara_f">
           <!--redes mobiles-->
           <span class="mobilewrap" id="wrap2">
-            <span class="material-symbols-outlined" style="font-size: 1.5em;filter:none;color: #5c5a5a;position: static;">
+            <span class="material-symbols-outlined" onclick="togglesocial('img2_mobile')" style="font-size: 1.5em;filter:none;color: #5c5a5a;position: static;">
               more_vert
               </span>
               <!--redes mobile-->
-<div class="social_mobile"  id="img1_mobile">
+<div class="social_mobile"  id="img2_mobile">
 <div class="media_mobile">
 <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
 </div>
@@ -253,6 +253,20 @@ function closeNav() {
   document.getElementById("myNav").style.height = "0%";
   document.getElementById("myNav").style.visibility = "hidden";
 }
+
+
+
+  //cambiar estilo wrap1 y wrap2
+  function togglesocial(elementId) {
+    const element = document.getElementById(elementId);
+    if (element.style.opacity === "1") {
+      element.style.opacity = "0";
+    } else {
+      element.style.opacity = "1";
+    }
+  }
+
+ 
 
 //texto giratorio
     document.addEventListener('DOMContentLoaded', () => {

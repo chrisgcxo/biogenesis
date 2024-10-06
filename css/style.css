@@ -721,10 +721,12 @@ display: none;
 
 /*foto1*/
 #img1_mobile{
+  opacity: 0;
   justify-content: flex-start;
 width: auto;
 left: 72%;
 top: 70px;
+transition:all .5s ease-in-out;
 }
 
 .placeholder{
@@ -776,8 +778,11 @@ top: 70px;
 
 /*foto2*/
 #img2_mobile{
+opacity: 0;
   width:auto;
+  height: auto;
   justify-content: flex-end;
+  transition:all .5s ease-in-out;
 }
 
 #amara_f{
