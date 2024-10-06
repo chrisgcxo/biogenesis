@@ -677,31 +677,25 @@ display: none;
 /*mostrar mobile*/
 .social_mobile {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  position: relative;
 }
 
-.media_mobile{
-  margin: auto;
-  background-color: rgb(18 17 17 / 19%);
-  padding: 7px;
-  margin: 7px;
-  border-radius: 10%;
-  border-top: solid 1px #ffffff1f;
-  border-left: solid 1px #ffffff1f;
-  border-bottom: solid 1px #0e0d0d0d;
-  border-right: solid 1px #0e0d0d0d;
-}
+
 
 .social_mobile .media_mobile a i{
-  
+  backdrop-filter:drop-shadow(0.35rem 0.35rem 0.4rem rgba(255, 255, 255, 0.5));
  color: #7a7a7a;
   font-size: 1.9em;
+  margin: 5px;
 }
 
 /*foto1*/
 #img1_mobile{
   justify-content: flex-start;
 width: auto;
+left: 72%;
+top: 70px;
 }
 
 .placeholder{
@@ -714,16 +708,9 @@ width: auto;
 
 .seccion_2 h3 {
   font-size: 1.05em;
+  margin-top: 20px;
 }
-/*texto h3 e img*/
-.tys{
-  display: flex;
-  flex-direction: row;
-  align-items: baseline; 
-  justify-content: space-between;
-  width: 100%;
-  padding: 20px;
-}
+
 
   /*ocultar cosas*/
 
