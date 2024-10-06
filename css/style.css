@@ -698,8 +698,16 @@ display: none;
 /*foto1*/
 #img1_mobile{
   justify-content: flex-start;
-top:-60px;
+top:-48px;
 margin-top: 0px;
+width: 100%;
+background-color: rgba(255, 255, 255, 0.192);
+border-radius: 0px 0px 0px 20px;
+border-top: solid 1px #ffffff1f;
+border-left: solid 1px #ffffff1f;
+border-bottom: solid 1px #0e0d0d0d;
+border-right: solid 1px #0e0d0d0d;
+backdrop-filter: blur(5px);
 }
 
 .placeholder{
