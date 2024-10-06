@@ -686,19 +686,18 @@ display: none;
   align-items:center;
   justify-content: space-between;
   width: auto;
-  background-color: aqua;
 }
 
 #wrap1{
-  left:82%;
+  left: 74%;
   top: 10%;
   height: 80%;
 }
 
 #wrap2{
-  left: 82%;
-  top: 10%;
-  height: 80%;
+  left: 78%;
+  top: 24%;
+  height: 35%;
 }
 
 .social_mobile {
@@ -709,10 +708,15 @@ display: none;
 
 
 .social_mobile .media_mobile a i{
-  backdrop-filter:drop-shadow(0.35rem 0.35rem 0.4rem rgba(255, 255, 255, 0.5));
  color: #7a7a7a;
   font-size: 1.9em;
   margin: 5px;
+  padding: 10px;
+  background-color: rgba(91, 92, 92, 0.171);
+  backdrop-filter: blur(5px);
+  border: 1px solid #ffffff11;
+  border-radius: 15px;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.103);
 }
 
 /*foto1*/
