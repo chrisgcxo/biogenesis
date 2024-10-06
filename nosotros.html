@@ -1,0 +1,61 @@
+<head> 
+    <!---->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <!--css y fuentes -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css"> 
+    <!--css nosotros-->
+    <link rel="stylesheet" href="css/nosotros.css"> 
+    <!--fuentes-->
+    <!--jet brain-->
+    <link rel ="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!--iconos font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--google iconos-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<header>
+    <nav class="deskwrapper">
+        <img src="images/logo(b).png" alt="logo">
+        <ul>
+            <li id="glow"><a href="index.html">inicio</a></li>
+            <li id="glow"><a href="implantes.html">implantes</a></li>
+            <li id="glow"><a href="nosotros.html">nosotros</a></li>
+        </ul>
+    </nav>
+    <div class="mobilewrapper">
+        <img src="images/logo(b).png" alt="logo">
+        <!--iconos google-->
+        <span class="material-symbols-outlined" style="font-size: 2.5em;filter: none;position: unset;" onclick="openNav()">menu</span>
+        <div class="contents" id="myNav">
+            <div class="overlay-content">
+                <span class="material-symbols-outlined" style="margin: 5px;font-size: 2em;filter:none;position: unset;" onclick="closeNav()">close</span>
+                <div class="c1">
+                    <a href="index.html" id="links">inicio</a>
+                    <a href="implantes.html" id="links">implantes</a>
+                    <a href="nosotros.html" id="links">nosotros</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+</header>
+<body id="Bodynos">
+    <!--scripts-->
+    <script>
+          //abrir  y cerrar barra nav-mobile
+  function openNav() {
+  document.getElementById("myNav").style.height = "30%";
+  document.getElementById("myNav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+  document.getElementById("myNav").style.visibility = "hidden";
+}
+    </script>   
+</body>

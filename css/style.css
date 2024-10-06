@@ -1,3 +1,6 @@
+/*css general*/
+/*se usan algunas clases para todas las paginas de la web*/
+
 /* Aplicar box-sizing a todos los elementos */
 *,
 *::before,
@@ -144,6 +147,7 @@ ul{
       --gradient-color-2: #7a7a7a; 
       --gradient-color-3: #b1b0b0;  
       --gradient-color-4: #dadada;
+      overflow: hidden;
     }
 
     canvas {

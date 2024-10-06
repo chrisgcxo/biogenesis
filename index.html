@@ -23,8 +23,8 @@
             <img src="images/logo(b).png" alt="logo">
             <ul>
                 <li id="glow"><a href="index.html">inicio</a></li>
-                <li id="glow"><a href="index.html">implantes</a></li>
-                <li id="glow"><a href="index.html">nosotros</a></li>
+                <li id="glow"><a href="implantes.html">implantes</a></li>
+                <li id="glow"><a href="nosotros.html">nosotros</a></li>
             </ul>
            </nav>
             <div class="mobilewrapper">
@@ -37,8 +37,8 @@
 
                   <div class="c1">
                     <a href="index.html" id="links">inicio</a>
-                    <a href="index.html" id="links">implantes</a>
-                    <a href="index.html" id="links">nosotros</a>
+                    <a href="implantes.html" id="links">implantes</a>
+                    <a href="nosotros.html" id="links">nosotros</a>
                   </div>
                 </div>
               </div>
@@ -172,43 +172,40 @@
         
         <script type="module">
           import { Gradient } from './js/gradient.js'; 
-
+      
           document.addEventListener('DOMContentLoaded', () => {
-            const gradient = new Gradient();
-            const canvas = document.getElementById('gradient-canvas');
-            const header = document.querySelector('header');
-            const section1 = document.querySelector('.seccion_1');
-
-            function getTotalHeight(element) {
-              let totalHeight = element.offsetHeight;
-              const styles = window.getComputedStyle(element);
-              totalHeight += parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
-              return totalHeight;
-            }
-
-            function adjustCanvasSize() {
-              const headerHeight = getTotalHeight(header);
-              const section1Height = getTotalHeight(section1);
-              const totalHeight = headerHeight + section1Height;
-
-              canvas.style.width = '100%';
-              canvas.style.height = `${totalHeight}px`;
-
-              gradient.initGradient('#gradient-canvas');
-            }
-
-            adjustCanvasSize();
-            window.addEventListener('resize', adjustCanvasSize);
-          });
-        </script>
+              const canvas = document.getElementById('gradient-canvas');
+              const header = 121;
+              const section1 = document.querySelector('.seccion_1');
+      
+              function getTotalHeight(element) {
+                  let totalHeight = element.offsetHeight;
+                  const styles = window.getComputedStyle(element);
+                  totalHeight += parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
+                  return totalHeight;
+              }
+      
+              function adjustCanvasSize() {
+                  const section1Height = getTotalHeight(section1);
+                  const totalHeight =section1Height+header;
+                  canvas.style.width = '100%';
+                  canvas.style.height = `${totalHeight}px`;
+              }
+      
+              // Inicializa el gradiente
+              const gradient = new Gradient();
+              adjustCanvasSize();
+              gradient.initGradient('#gradient-canvas'); // Inicializa el gradiente después de haberlo creado
+                       window.addEventListener('resize', adjustCanvasSize);
+            });
+      </script>
   
  
   
   <!-- Texto Giratorio y Vanilla Tilt -->
   <script>
 
-
-<!-- Copiar el height de un div y aplicarlo en otro -->
+//Copiar el height de un div y aplicarlo en otro
   // Función para inyectar el texto con diferentes saltos de línea
  function ajustarSaltosDeLinea() {
       const h1 = document.getElementById('t1');
@@ -223,25 +220,8 @@
       }
   }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      // Ajustar la altura del canvas en función de la altura del header y de la primera sección
-      function adjustCanvasHeight() {
-        const header = document.querySelector('header');
-        const section1 = document.querySelector('.seccion_1');
-        const canvas = document.getElementById('gradient-canvas');
-  
-        if (header && section1 && canvas) {
-          const headerHeight = header.offsetHeight;
-          const headerMarginBottom = parseFloat(window.getComputedStyle(header).marginBottom);
-          const section1Height = section1.offsetHeight;
-          const totalHeight = headerHeight + headerMarginBottom + section1Height;
-          canvas.style.height = `${totalHeight}px`;
-        }
-      }
-  
-      // Ejecutar la función al cargar la página
-      adjustCanvasHeight();
-    });
+
+
 
   //abrir  y cerrar barra nav-mobile
   function openNav() {
