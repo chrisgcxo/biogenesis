@@ -685,12 +685,11 @@ display: none;
   background-color: rgb(18 17 17 / 19%);
   padding: 7px;
   margin: 7px;
-  border-radius: 20%;
+  border-radius: 10%;
   border-top: solid 1px #ffffff1f;
   border-left: solid 1px #ffffff1f;
   border-bottom: solid 1px #0e0d0d0d;
   border-right: solid 1px #0e0d0d0d;
-  backdrop-filter: blur(5px);
 }
 
 .social_mobile .media_mobile a i{
