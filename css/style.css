@@ -108,6 +108,9 @@ ul{
 .mobilewrapper{
   display: none;
 }
+.mobilewrapper{
+  display: none;
+}
 
 
 
@@ -675,10 +678,32 @@ display: none;
   }
 
 /*mostrar mobile*/
+.mobilewrap{
+  padding: 10px;
+  filter: none;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-between;
+  width: auto;
+  background-color: aqua;
+}
+
+#wrap1{
+  left:82%;
+  top: 10%;
+  height: 80%;
+}
+
+#wrap2{
+  left: 82%;
+  top: 10%;
+  height: 80%;
+}
+
 .social_mobile {
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
 
