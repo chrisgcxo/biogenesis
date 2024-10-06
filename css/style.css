@@ -635,7 +635,6 @@ background-color: #d9d9d9 ;
     font-size: 2.5em;
     padding: 15px;
     margin: 0px;
-    padding: 15px;
   }
 
   .seccion_1 .texto p{
@@ -699,9 +698,6 @@ display: none;
 
 .seccion_2 h3 {
   font-size: 1.05em;
-  padding: 15px;
-  border-radius: 20px;
-  box-shadow: 12px 12px 16px 0 rgb(0 0 0 / 11%) inset, -8px -8px 12px 0 rgb(255 255 255 / 10%) inset;
 }
 
   /*seccion 3*/
