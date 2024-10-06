@@ -384,7 +384,6 @@ width: 90%;
       /*ocultar redes mobile*/
       .social_mobile{
         display: none;
-        position: absolute;
       }
     
 
@@ -679,35 +678,31 @@ display: none;
 .social_mobile {
   display: flex;
   flex-direction: row;
-  width: 99%;
-  padding: 10px;
-  position: relative;
-  margin-top: 15px;
 }
 
 .media_mobile{
-  margin:0px 0px 0px 8px;
+  margin: auto;
+  background-color: rgb(18 17 17 / 19%);
+  padding: 7px;
+  margin: 7px;
+  border-radius: 20%;
+  border-top: solid 1px #ffffff1f;
+  border-left: solid 1px #ffffff1f;
+  border-bottom: solid 1px #0e0d0d0d;
+  border-right: solid 1px #0e0d0d0d;
+  backdrop-filter: blur(5px);
 }
 
 .social_mobile .media_mobile a i{
-  color: #7a7a7a;
-  font-size: 1.8em;
-  backdrop-filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(34, 34, 34, 0.5));
+  
+ color: #7a7a7a;
+  font-size: 1.9em;
 }
 
 /*foto1*/
 #img1_mobile{
   justify-content: flex-start;
-top:-48px;
-margin-top: 0px;
-width: 100%;
-background-color: rgba(255, 255, 255, 0.192);
-border-radius: 0px 0px 0px 20px;
-border-top: solid 1px #ffffff1f;
-border-left: solid 1px #ffffff1f;
-border-bottom: solid 1px #0e0d0d0d;
-border-right: solid 1px #0e0d0d0d;
-backdrop-filter: blur(5px);
+width: auto;
 }
 
 .placeholder{
@@ -717,9 +712,18 @@ backdrop-filter: blur(5px);
 
 
 
+
 .seccion_2 h3 {
   font-size: 1.05em;
-  margin-top: -20px;
+}
+/*texto h3 e img*/
+.tys{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline; 
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
 }
 
   /*ocultar cosas*/
@@ -757,6 +761,7 @@ backdrop-filter: blur(5px);
 
 /*foto2*/
 #img2_mobile{
+  width:auto;
   justify-content: flex-end;
 }
 
