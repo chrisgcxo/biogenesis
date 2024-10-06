@@ -578,6 +578,7 @@ header{
     display: flex;
     flex-direction: column;
     border-radius: 20px;
+    margin-top: 8px;
     overflow: hidden;
     width: 100%;
     align-items: center;
@@ -739,7 +740,7 @@ transition:all .5s ease-in-out;
 
 .seccion_2 h3 {
   font-size: 1.05em;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 
