@@ -523,6 +523,7 @@ background-color: #d9d9d9 ;
 @media screen and (max-width: 1000px) {
 
 header{
+  background-color: #8181818f;
   backdrop-filter:unset;
   padding: 10px 20px 10px 10px;
 }
@@ -697,6 +698,8 @@ display: none;
 /*foto1*/
 #img1_mobile{
   justify-content: flex-start;
+top:-60px;
+margin-top: 0px;
 }
 
 .placeholder{
@@ -708,6 +711,7 @@ display: none;
 
 .seccion_2 h3 {
   font-size: 1.05em;
+  margin-top: -20px;
 }
 
   /*ocultar cosas*/
