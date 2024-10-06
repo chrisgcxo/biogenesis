@@ -436,6 +436,13 @@ background-color: #d9d9d9 ;
       }
     }
 
+    #amara_f{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      margin-top: 0px;
+      margin-bottom: 0px;}
+
     /*neumorfismo*/
     .element {
   background: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
@@ -700,6 +707,12 @@ display: none;
   font-size: 1.05em;
 }
 
+  /*ocultar cosas*/
+
+  .seccion_2 .container_fede{
+    display: none;
+  }
+
   /*seccion 3*/
   .seccion_3 {
     padding-top: 0px;
@@ -725,7 +738,6 @@ display: none;
 .seccion_3 .contenedor_5 {
   margin-top: 0px;
   width: 100%;
-  height: 60%;
 }
 
 /*foto2*/
@@ -733,11 +745,12 @@ display: none;
   justify-content: flex-end;
 }
 
-  /*ocultar cosas*/
-
-  .seccion_2 .container_fede{
-    display: none;
-  }
+#amara_f{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-top: 0px;
+  margin-bottom: 0px;}
 
 }
 
