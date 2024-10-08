@@ -658,7 +658,7 @@ margin-left:100px;
 }
 .nosotros h2{
   font-family: JetBrains Mono;
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 400;
   line-height: 42.24px;
   text-align: left;
@@ -667,6 +667,7 @@ margin-left:100px;
 .texto_nos{
   position: relative;
   padding: 80px;
+  width: 100%;
 }
 
 .texto_nos::before {
