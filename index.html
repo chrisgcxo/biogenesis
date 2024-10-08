@@ -1,258 +1,313 @@
 <!DOCTYPE html>
 <html>
-<head> 
-      <!---->
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biogenis</title>
-    <!--css y fuentes -->
-    <!-- css -->
-    <link rel="stylesheet" href="css/style.css"> 
-    <!--jet brain-->
-    <link rel ="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-<!--iconos font awesome-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<!--google iconos-->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<head>
+  <!---->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biogenis</title>
+  <!--css y fuentes -->
+  <!-- css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!--jet brain-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <!--google iconos-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <header>
-           <nav class="deskwrapper">
-            <img src="images/logo(b).png" alt="logo">
-            <ul>
-                <li id="glow"><a href="index.html">inicio</a></li>
-                <li id="glow"><a href="implantes.html">implantes</a></li>
-                <li id="glow"><a href="nosotros.html">nosotros</a></li>
-            </ul>
-           </nav>
-            <div class="mobilewrapper">
-              <img src="images/logo(b).png" alt="logo">
-            <!--iconos google-->
-            <span class="material-symbols-outlined" style="font-size: 2.5em;filter: none;position: unset;" onclick="openNav()">menu</span>
-              <div class="contents" id="myNav">
-                <div class="overlay-content">
-                  <span class="material-symbols-outlined" style="margin: 5px;font-size: 2em;filter:none;position: unset;" onclick="closeNav()">close</span>
+  <nav class="deskwrapper">
+    <img src="images/logo(b).png" alt="logo">
+    <!--desactivar nav momentaneamente,quitar  style display none-->
+    <ul>
+      <li id="glow"><a href="#section1">inicio</a></li>
+      <li id="glow"><a href="#section2">eventos</a></li>
+      <li id="glow"><a href="#section3">nosotros</a></li>
+    </ul>
+  </nav>
+  <div class="mobilewrapper">
+    <img src="images/logo(b).png" alt="logo">
+    <!--iconos google-->
+    <!--descativar momentaneamente el span y contents, para activar quitar display none-->
+    <span class="material-symbols-outlined" style="display: none;font-size: 2.5em;filter: none;position: unset;"
+      onclick="openNav()">menu</span>
+    <div class="contents" style="display: none;" id="myNav">
+      <div class="overlay-content">
+        <span class="material-symbols-outlined" style="margin: 5px;font-size: 2em;filter:none;position: unset;"
+          onclick="closeNav()">close</span>
 
-                  <div class="c1">
-                    <a href="index.html" id="links">inicio</a>
-                    <a href="implantes.html" id="links">implantes</a>
-                    <a href="nosotros.html" id="links">nosotros</a>
-                  </div>
-                </div>
-              </div>
-        
-            </div>              
+        <div class="c1">
+          <a href="index.html" id="links">inicio</a>
+          <a href="implantes.html" id="links">implantes</a>
+          <a href="nosotros.html" id="links">nosotros</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </header>
 
 <body>
-    <div class="gradient">
-      <canvas id="gradient-canvas" data-transition-in="" style="width: 100%; height: auto; " class="isLoaded"></canvas>
+  <div class="gradient">
+    <canvas id="gradient-canvas" data-transition-in="" style="width: 100%; height: auto; " class="isLoaded"></canvas>
+  </div>
+
+  <section class="seccion_1"id="section1">
+    <div class="texto">
+      <div class="ts1">
+        <h1>Explora
+          Mas alla de
+          lo ordinario</h1>
+      </div>
+      <div class="subts1">
+        <p>
+          Creemos en un futuro donde cada
+          individuo tenga el poder de
+          moldear su destino, donde las
+          limitaciones son meras reliquias
+          del pasado.
+        </p>
+      </div>
 
     </div>
+    <!--texto giratorio descomentar para que funcione-->
+    <!--<tg id="text"></tg>-->
+    </div>
+  </section>
 
-    <section class="seccion_1">
-<div class="texto glass">
-            <h1 id="t1"></h1>
-    <p>
-        Creemos en un futuro donde cada <br>
-        individuo tenga el poder de <br>
-        moldear su destino, donde las <br>
-        limitaciones son meras reliquias <br>
-        del pasado.
-    </p>
-</div>
-</div>
-<div class="images">
-    <img src="images/img_mujer3.png" alt="amaraa" class="amara_1">
-    <tg id="text"></tg>
-</div>
-</section>
-
-
-    <section class="seccion_2 element element-4">
-        
-        <div class="contenedor_t">
-            <h1>/BIOGENESIS</h1>
+<section class="evento_destacado" id="section2">
+    <!--contenedor evento-->
+    <div class="wrapper_evento">
+      
+      <div class="eventon">
+        <div class="ev1">
+          <div class="evd">
+            <span  style ="position: unset;margin:0px;filter: none;"class="material-symbols-outlined">
+              bookmark
+              </span>
+            <h2>Evento Destacado</h2>
+          </div>
+          <div class="evd2">
+            <h3>20° Aniversario de
+              Biogenesis</h3>
+          </div>
         </div>
-
-            <div class="contenedor1">
-                <div class="contenedor1a">
-                    <h2>SUMATE A LA FIESTA</h2>
-                    <div class="container_img1 element element-2" >
-                        <!--redes escritorio 1-->
-                        <div class="social-media" id="img1">
-                            <div class="media">
-                                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                            </div>
-                            <div class="media">
-                                <a href="https://www.reddit.com" target="_blank"><i class="fab fa-reddit"></i></a>
-                            </div>
-                            </div>
-                            <span class="mobilewrap" id="wrap1">
-                              <span class="material-symbols-outlined" onclick="togglesocial('img1_mobile')" style="font-size: 1.5em;filter:none;color: #5c5a5a;position: static;" >
-                                more_vert
-                                </span>
-                                <!--redes mobile-->
-  <div class="social_mobile"  id="img1_mobile">
-    <div class="media_mobile">
-        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+  <!--contador-->
+  <div class="contador">
+    <h3>Empieza en...</h3>
+    <!--tiempo-->
+    <div class ="tiempo">
+     <div class="dias">
+       <h4 id="dias">00</h4>
+       <p>Dias</p>
     </div>
-    <div class="media_mobile">
-        <a href="https://www.reddit.com" target="_blank"><i class="fab fa-reddit"></i></a>
+    <div class="horas">
+      <h4 id="horas">00</h4>
+      <p>Horas</p>
+    </div>
+    <div class="minutos">
+      <h4 id="minutos">00</h4>
+      <p>Min</p>
+    </div>
+    <div class="segundos">
+      <h4 id="segundos">00</h4>
+      <p>Seg</p>
     </div>
   </div>
-</span>
-                            
-                        <img src="images/federico_frente.png" class="placeholder" style="object-fit: contain;">       
-                    </div>
-
-
-                <h3>NO TE PIERDAS DE LA PRESENTACION DEL<br>
-                    RECONOCIDO ARTISTA “ALVARO ROJAS” EN <br>
-                    CONMEMORACION A NUESTROS 20 AÑOS DE<br>
-                     TRAYECTORIA
-                </h3>
-                </div>
-
-                <div class="container_fede element element-2">
-                      <!--redes escritorio 2-->
-                    <div class="social-media" id="img2">
-                        <div class="media">
-                            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                        </div>
-                      <div class="media">
-                        <a href="https://www.reddit.com" target="_blank"><i class="fab fa-reddit"></i></a>
-                      </div>
-                    </div>
-                    <img src="images/federico_frente.png" alt="federico" style="object-fit: contain;">     
-                </div>                   
-        </div>
-        </section>
-
-        <section class="seccion_3 ">
-            <diV class="contenedor4y5">
-                <div class="contenedor_4">
-                    <h3>ORGANIZADORA Y RESPONSABLE DE <br>
-                        EVENTO: AMARA TORRADO</h3>
-                </div>
-                
-      <div class="contenedor_5">
-          <!--redes escritorio 3-->
-        <div class="social-media" id="img3">
-            <div class="media">
-                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-            </div>
-            <div class="media">
-                <a href="https://www.reddit.com" target="_blank"><i class="fab fa-reddit"></i></a>
-            </div>
-        </div>
-          <img src="images/amara_frente.png" alt="amara_f" id="amara_f">
-          <!--redes mobiles-->
-          <span class="mobilewrap" id="wrap2">
-            <span class="material-symbols-outlined" onclick="togglesocial('img2_mobile')" style="font-size: 1.5em;filter:none;color: #5c5a5a;position: static;">
-              more_vert
-              </span>
-              <!--redes mobile-->
-<div class="social_mobile"  id="img2_mobile">
-<div class="media_mobile">
-<a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-</div>
-<div class="media_mobile">
-<a href="https://www.reddit.com" target="_blank"><i class="fab fa-reddit"></i></a>
-</div>
-</div>
-</span>
-      </div>
-     
-            </div>
-        </section>
-
-        
-        <script type="module">
-          import { Gradient } from './js/gradient.js'; 
-      
-          document.addEventListener('DOMContentLoaded', () => {
-              const canvas = document.getElementById('gradient-canvas');
-              const header = 121;
-              const section1 = document.querySelector('.seccion_1');
-      
-              function getTotalHeight(element) {
-                  let totalHeight = element.offsetHeight;
-                  const styles = window.getComputedStyle(element);
-                  totalHeight += parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
-                  return totalHeight;
-              }
-      
-              function adjustCanvasSize() {
-                  const section1Height = getTotalHeight(section1);
-                  const totalHeight =section1Height+header;
-                  canvas.style.width = '100%';
-                  canvas.style.height = `${totalHeight}px`;
-              }
-      
-              // Inicializa el gradiente
-              const gradient = new Gradient();
-              adjustCanvasSize();
-              gradient.initGradient('#gradient-canvas'); // Inicializa el gradiente después de haberlo creado
-                       window.addEventListener('resize', adjustCanvasSize);
-            });
-      </script>
-  
+  <div class="lugarygtm">
+    <div class="tlugar1">
  
-  
+      <span class="material-symbols-outlined" style ="position: unset;margin:0px;filter: none;">
+        home_pin
+        </span>
+    <p>Buenos Aires, Argentina</p>
+  </div>
+  <div class="tlugar2">
+    <span class="material-symbols-outlined" style ="position: unset;margin:0px;filter: none;">
+      radio_button_unchecked
+      </span>
+    <p>09:00 GMT</p>
+  </div>
+  </div>
+  </div>
+
+       <!--imagen-->
+       <div class="imagen">
+        <img src="images/evento_destacado.png"  id="imgevento"alt="evento_destacado">
+       </div>
+      </div>
+      
+
+</section>
+  <!--seccion 2-->
+  <section class="seccion_2">
+
+    </div>
+    <!--contenedenor amara  fede y texto (general)-->
+
+    <div class="wrapperaft">
+      <!--contenedor amara y fede-->
+      <div class="contenedorayf">
+
+        <!-- seccion amara-->
+        <div class=" contenedor_5 element element-2">
+          <!--redes escritorio 3-->
+          <div class="social-media" id="img3">
+            <div class="media">
+              <a href="https://x.com/AmaraTorrado" target="_blank"><img src="SVG/Vector_X.svg" alt="Twitter Logo"
+                  width="22" height="30"></a>
+            </div>
+          </div>
+          <img src="images/amara_frente.png" alt="amara_f" id="amara_f">
+        </div>
+
+        <!--seccion fede-->
+        <!--contenedor fede-->
+        <div class="container_img1 element element-2">
+          <!--redes escritorio 1-->
+          <div class="social-media" id="img1">
+            <div class="media">
+              <a href="https://x.com/Alv4r0R0j4s" target="_blank"><img src="SVG/Vector_X.svg" alt="Twitter Logo"
+                  width="22" height="30"></i></a>
+            </div>
+
+          </div>
+          <!--redes mobile-->
+          <div class="social_mobile" id="img1_mobile">
+            <div class="media_mobile">
+              <a href="https://x.com/Alv4r0R0j4s" target="_blank"><img src="SVG/Vector_X.svg" alt="Twitter Logo"
+                  width="42" height="50"></a>
+            </div>
+          </div>
+          </span>
+
+          <img src="images/federico_frente.png" class="placeholder">
+        </div>
+
+        <!--contenedor general del texto-->
+      </div>
+      <div class="wrapper_texto_s2">
+        <!--titulo-->
+        <h1>EVENTO</h1>
+
+
+        <h2>CONOCE A NUESTRO ARTISTA INVITADO Y A LA ORGANIZADORA DE EVENTOS</h2>
+      </div>
+    </div>
+
+    <!--organizacion -->
+    <div class="organizacion">
+  </section>
+
+<!--nosotros-->
+<section class="nosotros" id="section3">
+  <div class="titulo_nosotros">
+    <h1>NOSOTROS</h1> 
+  </div>
+  <div class="texto_nos">
+    <h2>
+      Biogénesis es una empresa pionera en el diseño y producción de implantes biogenéticos, dedicados a mejorar las capacidades humanas de manera significativa. Nuestros implantes están diseñados para potenciar habilidades físicas y cognitivas, permitiendo que las personas superen limitaciones y alcancen un nuevo nivel de rendimiento.
+      <br>
+      <br>
+
+      Contamos con un equipo multidisciplinario de expertos en biotecnología, ingeniería y medicina que trabaja incansablemente para garantizar la más alta calidad en nuestros productos. Además, colaboramos estrechamente con instituciones de investigación y universidades para mantenernos a la vanguardia de los avances en biogenética y ofrecer soluciones que marquen la diferencia en la vida de las personas.
+    </h2>
+    </div>
+    <div class="conocenos_mas">
+      <a href="https://x.com/BiogenesisArg"><img src="SVG/Vector_XN.svg" alt="Twitter Logo negro"
+        width="42" height="50"></a>
+      <h1>CONOCENOS MÁS</h1>
+      </div>
+</section>
+  <!--scripts-->
+  <script type="module">
+    import { Gradient } from './js/gradient.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const canvas = document.getElementById('gradient-canvas');
+      const header = 120;
+      const section1 = document.querySelector('.seccion_1');
+
+      function getTotalHeight(element) {
+        let totalHeight = element.offsetHeight;
+        const styles = window.getComputedStyle(element);
+        totalHeight += parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
+        return totalHeight;
+      }
+
+      function adjustCanvasSize() {
+        const section1Height = getTotalHeight(section1);
+        const totalHeight = section1Height + header;
+        canvas.style.width = '100%';
+        canvas.style.height = `${totalHeight}px`;
+      }
+
+      // Inicializa el gradiente
+      const gradient = new Gradient();
+      gradient.initGradient('#gradient-canvas'); // Inicializa el gradiente después de haberlo creado
+      adjustCanvasSize();
+    });
+  </script>
+
+
+
   <!-- Texto Giratorio y Vanilla Tilt -->
   <script>
 
-//Copiar el height de un div y aplicarlo en otro
-  // Función para inyectar el texto con diferentes saltos de línea
- function ajustarSaltosDeLinea() {
-      const h1 = document.getElementById('t1');
-      const screenWidth = window.innerWidth;
+//scroll nav bar
+// Selecciona todos los enlaces de la navbar
+const navLinks = document.querySelectorAll('.deskwrapper a');
 
-      // Si la pantalla es menor o igual a 600px (móvil)
-      if (screenWidth <= 1000) {
-          h1.innerHTML = "explora <br> mas alla de lo <br> ordinario";
-      } else {
-          // Si es una pantalla más grande (desktop/tablet)
-          h1.innerHTML = "explora <br> mas alla <br> de lo <br>ordinario";
-      }
-  }
+navLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault(); // Evita el comportamiento por defecto
 
+    const targetId = this.getAttribute('href'); // Obtiene el ID del destino
+    const targetSection = document.querySelector(targetId); // Selecciona la sección
 
-
-
-  //abrir  y cerrar barra nav-mobile
-  function openNav() {
-  document.getElementById("myNav").style.height = "30%";
-  document.getElementById("myNav").style.visibility = "visible";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.height = "0%";
-  document.getElementById("myNav").style.visibility = "hidden";
-}
+    targetSection.scrollIntoView({ 
+      behavior: 'smooth' // Agrega scroll suave
+    });
+  });
+});
 
 
-
-  //cambiar estilo wrap1 y wrap2
-  function togglesocial(elementId) {
-    const element = document.getElementById(elementId);
-    if (element.style.opacity === "1") {
-      element.style.opacity = "0";
-    } else {
-      element.style.opacity = "1";
+    //abrir  y cerrar barra nav-mobile
+    function openNav() {
+      document.getElementById("myNav").style.height = "30%";
+      document.getElementById("myNav").style.visibility = "visible";
     }
-  }
 
- 
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+      document.getElementById("myNav").style.visibility = "hidden";
+    }
 
-//texto giratorio
+
+
+    //cambiar estilo wrap1 y wrap2
+    function togglesocial(elementId) {
+      const element = document.getElementById(elementId);
+      if (element.style.opacity === "1" && element.style.visibility === "visible") {
+        element.style.opacity = "0";
+        element.style.visibility = "hidden";
+      } else {
+        element.style.opacity = "1";
+        element.style.visibility = "visible";
+      }
+    }
+
+
+
+    //texto giratorio
     document.addEventListener('DOMContentLoaded', () => {
       const str = "NUEVO MODELO XR_20G-NUEVO MODELO";
       const textContainer = document.getElementById("text");
-  
+
       function createRotatingText() {
         if (textContainer) {
           for (let i = 0; i < str.length; i++) {
@@ -263,8 +318,8 @@ function closeNav() {
           }
         }
       }
-      
-  //hover fotos
+
+      //hover fotos
       function applyVanillaTilt() {
         if (window.innerWidth >= 1000) {
           VanillaTilt.init(document.querySelectorAll(".container_img1, .container_fede, .contenedor_5"), {
@@ -276,26 +331,24 @@ function closeNav() {
         }
       }
 
-        // Eliminar estilos  en función de una clase en pantallas pequeñas
-        function eliminarclase(classNameToRemove, classNameToKeep) {
-    const elements = document.querySelectorAll(`.${classNameToKeep}.${classNameToRemove}`);
-    
-    if (window.innerWidth < 1000) {
-        elements.forEach(element => {
+      // Eliminar estilos  en función de una clase en pantallas pequeñas
+      function eliminarclase(classNameToRemove, classNameToKeep) {
+        const elements = document.querySelectorAll(`.${classNameToKeep}.${classNameToRemove}`);
+
+        if (window.innerWidth < 1000) {
+          elements.forEach(element => {
             // Elimina la clase 'glass' solo si está presente
             element.classList.remove(classNameToRemove);
-        });
-    }
-}
-
-   
-  
-      // Ejecutar las funciones
-      if(window.innerWidth >= 1000){
-        createRotatingText();
+          });
+        }
       }
 
-      ajustarSaltosDeLinea();
+
+
+      // Ejecutar las funciones
+      if (window.innerWidth >= 1000) {
+        createRotatingText();
+      }
       applyVanillaTilt();
       eliminarclase('glass', 'texto');
       // Recalcular el efecto Tilt en redimensionar
@@ -303,13 +356,38 @@ function closeNav() {
       window.addEventListener('resize', () => {
         eliminarclase('glass', 'texto');
 
-});
+      });
     });
+
+    <!-- Contador Regresivo -->
+    const eventoFecha = new Date("December 31, 2024 09:00:00 GMT").getTime();
+
+    const actualizarContador = () => {
+      const ahora = new Date().getTime();
+      const distancia = eventoFecha - ahora;
+
+      const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+      document.getElementById("dias").innerHTML = dias;
+      document.getElementById("horas").innerHTML = horas;
+      document.getElementById("minutos").innerHTML = minutos;
+      document.getElementById("segundos").innerHTML = segundos;
+
+      if (distancia < 0) {
+        clearInterval(intervalo);
+        document.querySelector(".contador").innerHTML = "<h3>El evento ha comenzado</h3>";
+      }
+    };
+
+    const intervalo = setInterval(actualizarContador, 1000);
   </script>
-  
+
   <!-- Vanilla Tilt Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-  
-</body>
-</html>
 
+</body>
+
+</html>
