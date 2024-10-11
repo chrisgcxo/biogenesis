@@ -989,8 +989,10 @@ span {
   }
   .organizacion{
    width: 100%;
-   height: 45vh;
+   height: 100vh;
    margin-bottom: 50px;
+   background-image: url(../images/organizacion_mobile.png);
+   background-size: 100%;
   }
 
   /*foto alvaro*/
