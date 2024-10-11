@@ -437,7 +437,7 @@ justify-content: space-around;
   margin: 0px;
 }
 
-.imagen{
+.imagenev{
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -774,7 +774,7 @@ span {
 
 /*responsive*/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
 
   header {
     background-color: #8181818f;
@@ -872,24 +872,25 @@ span {
     height: 100px;
   }
 
+
   /*seccion1*/
   .seccion_1 {
     flex-direction: column;
     align-items: flex-start;
     background-image: url(../images/img_mujer3.png);
-    background-position: 120px 0px;
+    background-position:center bottom;
     background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 80px;
-    padding-bottom: 80px;
+    background-size: contain;
+    padding: 0px;
+    height: 100vh;
   }
 
   /*texto*/
   .seccion_1 .texto {
     margin-left: 0px;
     box-shadow: none;
-    width: 90%;
-    padding: 15px;
+    width: 100%;
+    padding: 0px;
   }
 
 
@@ -921,10 +922,42 @@ span {
     display: none;
   }
 
+
+  /*evento destacado*/
+
+.evento_destacado{
+  padding: 7% 5% 7% 5%;
+}
+.eventon{
+  flex-direction: column;
+}
+ .ev1{
+   width: 100%;
+   gap: 20px;}
+
+   .evd2{
+    margin: 0px;
+    width: 100%;
+   }
+
+   .contador{
+     width: 100%;
+   }
+
+   #imgevento{
+     height: 35vh;
+     left: 7%;
+     bottom: 10%;
+   }
+
   /*seccion2*/
   /*imagenes*/
   .seccion_2 .container_img1 {
     margin-bottom: 0px;
+  }
+
+  .imagenev{
+    width: 100%;
   }
 
   /*social media*/
@@ -944,6 +977,10 @@ span {
     align-items: center;
     justify-content: space-between;
     width: auto;
+  }
+
+  .wrapperaft{
+    flex-direction: column-reverse;
   }
 
   #wrap1 {
