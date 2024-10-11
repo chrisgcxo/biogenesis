@@ -979,7 +979,10 @@ span {
   .seccion_2 .contenedorayf{
     padding: 0px;
     width: 100%;
+    flex-direction: row-reverse;
   }
+
+
 
   .seccion_2 h2{
     font-size: 1.8em;
