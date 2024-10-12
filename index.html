@@ -43,9 +43,9 @@
           onclick="closeNav()">close</span>
 
         <div class="c1">
-          <a href="#section1" id="links">inicio</a>
-          <a href="#section2" id="links">eventos</a>
-          <a href="#section3" id="links">nosotros</a>
+          <a href="#section1" id="links" onclick="closeNav()">inicio</a>
+          <a href="#section2" id="links" onclick="closeNav()">eventos</a>
+          <a href="#section3" id="links" onclick="closeNav()">nosotros</a>
         </div>
       </div>
     </div>
@@ -210,7 +210,7 @@
     </h2>
     </div>
     <div class="conocenos_mas">
-      <a href="https://x.com/BiogenesisArg"><img src="SVG/Vector_XN.svg" alt="Twitter Logo negro"
+      <a href="https://x.com/BiogenesisArg"><img id="x_footer" src="SVG/Vector_XN.svg" alt="Twitter Logo negro"
         width="42" height="50"></a>
       <h1>CONOCENOS MÁS</h1>
       </div>
@@ -234,7 +234,6 @@
       function adjustCanvasSize() {
         const section1Height = getTotalHeight(section1);
         const totalHeight = section1Height + header;
-        canvas.style.width = '100%';
         canvas.style.height = `${totalHeight}px`;
       }
 
