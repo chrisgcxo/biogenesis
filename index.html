@@ -54,8 +54,8 @@
 </header>
 
 <body>
-  <div class="gradient">
-    <canvas id="gradient-canvas" data-transition-in=""  class="isLoaded"></canvas>
+  <div class="gradiente_wrap">
+    <canvas id="gradient-canvas" data-transition-in />
   </div>
 
   <section class="seccion_1"id="section1">
@@ -218,12 +218,11 @@
   <!--scripts-->
   <script type="module">
     import { Gradient } from './js/gradient.js';
-
     document.addEventListener('DOMContentLoaded', () => {
-   
-      // Inicializa el gradiente
+      //Inicializa el gradiente
+      
       const gradient = new Gradient();
-      gradient.initGradient('#gradient-canvas'); // Inicializa el gradiente después de haberlo creado
+      gradient.initGradient('#gradient-canvas'); 
     });
   </script>
 

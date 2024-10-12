@@ -1,4 +1,10 @@
-
+/*
+*   Stripe WebGl Gradient Animation
+*   All Credits to Stripe.com
+*   ScrollObserver functionality to disable animation when not scrolled into view has been disabled and 
+*   commented out for now.
+*   https://kevinhufnagl.com
+*/
 
 
 //Converting colors to proper format
@@ -245,19 +251,7 @@ function normalizeColor(hexCode) {
             })
         }
     }
-    //cambiar tamaño//
- header = 120;
- section1 = document.querySelector('.seccion_1');
-
-    getTotalHeight(element) {
-      let totalHeight = element.offsetHeight;
-      const styles = window.getComputedStyle(element);
-      totalHeight += parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
-      return totalHeight;
-    }
-    
-
-    setSize(e = window.innerWidth,t = getTotalHeight(section1) + header) {
+    setSize(e = 640, t = 480) {
         this.width = e, this.height = t, this.canvas.width = e, this.canvas.height = t, this.gl.viewport(0, 0, e, t), this.commonUniforms.resolution.value = [e, t], this.commonUniforms.aspectRatio.value = e / t, this.debug("MiniGL.setSize", {
             width: e,
             height: t
@@ -286,13 +280,15 @@ function normalizeColor(hexCode) {
   
   //Gradient object
   class Gradient {
-    constructor() {
-        e(this, "el", void 0), e(this, "cssVarRetries", 0), e(this, "maxCssVarRetries", 200), e(this, "angle", 0), e(this, "isLoadedClass", !1), e(this, "isScrolling", !1), /*e(this, "isStatic", o.disableAmbientAnimations()),*/ e(this, "scrollingTimeout", void 0), e(this, "scrollingRefreshDelay", 200), e(this, "isIntersecting", !1), e(this, "shaderFiles", void 0), e(this, "vertexShader", void 0), e(this, "sectionColors", void 0), e(this, "computedCanvasStyle", void 0), e(this, "conf", void 0), e(this, "uniforms", void 0), e(this, "t", 1253106), e(this, "last", 0), e(this, "width", void 0), e(this, "minWidth", 1111), e(this, "height", 600), e(this, "xSegCount", void 0), e(this, "ySegCount", void 0), e(this, "mesh", void 0), e(this, "material", void 0), e(this, "geometry", void 0), e(this, "minigl", void 0), e(this, "scrollObserver", void 0), e(this, "amp", 320), e(this, "seed", 5), e(this, "freqX", 14e-5), e(this, "freqY", 29e-5), e(this, "freqDelta", 1e-5), e(this, "activeColors", [1, 1, 1, 1]), e(this, "isMetaKey", !1), e(this, "isGradientLegendVisible", !1), e(this, "isMouseDown", !1), e(this, "handleScroll", () => {
+    constructor(...t) {
+        //aca se le puede cambiar el tamaño//
+        //e(this, "height",1111) bucar con ctrl f//
+        e(this, "el", void 0), e(this, "cssVarRetries", 0), e(this, "maxCssVarRetries", 200), e(this, "angle", 0), e(this, "isLoadedClass", !1), e(this, "isScrolling", !1), /*e(this, "isStatic", o.disableAmbientAnimations()),*/ e(this, "scrollingTimeout", void 0), e(this, "scrollingRefreshDelay", 200), e(this, "isIntersecting", !1), e(this, "shaderFiles", void 0), e(this, "vertexShader", void 0), e(this, "sectionColors", void 0), e(this, "computedCanvasStyle", void 0), e(this, "conf", void 0), e(this, "uniforms", void 0), e(this, "t", 1253106), e(this, "last", 0), e(this, "width", void 0), e(this, "minWidth", 1111), e(this, "height",1111), e(this, "xSegCount", void 0), e(this, "ySegCount", void 0), e(this, "mesh", void 0), e(this, "material", void 0), e(this, "geometry", void 0), e(this, "minigl", void 0), e(this, "scrollObserver", void 0), e(this, "amp", 320), e(this, "seed", 5), e(this, "freqX", 14e-5), e(this, "freqY", 29e-5), e(this, "freqDelta", 1e-5), e(this, "activeColors", [1, 1, 1, 1]), e(this, "isMetaKey", !1), e(this, "isGradientLegendVisible", !1), e(this, "isMouseDown", !1), e(this, "handleScroll", () => {
             clearTimeout(this.scrollingTimeout), this.scrollingTimeout = setTimeout(this.handleScrollEnd, this.scrollingRefreshDelay), this.isGradientLegendVisible && this.hideGradientLegend(), this.conf.playing && (this.isScrolling = !0, this.pause())
         }), e(this, "handleScrollEnd", () => {
             this.isScrolling = !1, this.isIntersecting && this.play()
         }), e(this, "resize", () => {
-            this.width = window.innerWidth, this.minigl.setSize(this.width, this.height), this.minigl.setOrthographicCamera(), this.xSegCount = Math.ceil(this.width * this.conf.density[0]), this.ySegCount = Math.ceil(this.height * this.conf.density[1]), this.mesh.geometry.setTopology(this.xSegCount, this.ySegCount), this.mesh.geometry.setSize(this.width, this.height), this.mesh.material.uniforms.u_shadow_power.value = this.width < 600 ? 5 : 6
+            this.width = window.innerWidth, this.minigl.setSize(this.width, this.height), this.minigl.setOrthographicCamera(), this.xSegCount = Math.ceil(this.width * this.conf.density[0]), this.ySegCount = Math.ceil(this.height * this.conf.density[1]), this.mesh.geometry.setTopology(this.xSegCount, this.ySegCount), this.mesh.geometry.setSize(this.width, this.height), this.mesh.material.uniforms.u_shadow_power.value = this.width < 1111 ? 5 : 6
         }), e(this, "handleMouseDown", e => {
             this.isGradientLegendVisible && (this.isMetaKey = e.metaKey, this.isMouseDown = !0, !1 === this.conf.playing && requestAnimationFrame(this.animate))
         }), e(this, "handleMouseUp", () => {
@@ -343,7 +339,16 @@ function normalizeColor(hexCode) {
           requestAnimationFrame(() => {
               this.el && (this.computedCanvasStyle = getComputedStyle(this.el), this.waitForCssVars())
           })
-          
+          /*
+          this.scrollObserver = await s.create(.1, !1),
+          this.scrollObserver.observe(this.el),
+          this.scrollObserver.onSeparate(() => {
+              window.removeEventListener("scroll", this.handleScroll), window.removeEventListener("mousedown", this.handleMouseDown), window.removeEventListener("mouseup", this.handleMouseUp), window.removeEventListener("keydown", this.handleKeyDown), this.isIntersecting = !1, this.conf.playing && this.pause()
+          }), 
+          this.scrollObserver.onIntersect(() => {
+              window.addEventListener("scroll", this.handleScroll), window.addEventListener("mousedown", this.handleMouseDown), window.addEventListener("mouseup", this.handleMouseUp), window.addEventListener("keydown", this.handleKeyDown), this.isIntersecting = !0, this.addIsLoadedClass(), this.play()
+          })*/
+  
         )
     }
     disconnect() {
@@ -498,5 +503,21 @@ function normalizeColor(hexCode) {
     }
   }
   
+  
+  
+  
+  /*
+  *Finally initializing the Gradient class, assigning a canvas to it and calling Gradient.connect() which initializes everything,
+  * Use Gradient.pause() and Gradient.play() for controls.
+  *
+  * Here are some default property values you can change anytime:
+  * Amplitude:    Gradient.amp = 0
+  * Colors:       Gradient.sectionColors (if you change colors, use normalizeColor(#hexValue)) before you assign it.
+  *
+  *
+  * Useful functions
+  * Gradient.toggleColor(index)
+  * Gradient.updateFrequency(freq)
+  */
   
   export { Gradient }
