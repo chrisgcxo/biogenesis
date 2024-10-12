@@ -159,6 +159,7 @@ ul {
 
 
 #gradient-canvas {
+  overflow: hidden;
   width:100%;
   height:100%;
   --gradient-color-1: #3d3c3c;
@@ -986,8 +987,8 @@ span {
     position: relative;
      height: 25vh;
      filter: none;
-    left: 36%;
-     top: 45px;
+    left: 30%;
+     top: 65px;
    }
 
 
