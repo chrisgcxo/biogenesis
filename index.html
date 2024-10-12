@@ -55,7 +55,7 @@
 
 <body>
   <div class="gradient">
-    <canvas id="gradient-canvas" data-transition-in="" style="width: 100%; height: auto; " class="isLoaded"></canvas>
+    <canvas id="gradient-canvas" data-transition-in=""  class="isLoaded"></canvas>
   </div>
 
   <section class="seccion_1"id="section1">
@@ -220,27 +220,10 @@
     import { Gradient } from './js/gradient.js';
 
     document.addEventListener('DOMContentLoaded', () => {
-      const canvas = document.getElementById('gradient-canvas');
-      const header = 120;
-      const section1 = document.querySelector('.seccion_1');
-
-      function getTotalHeight(element) {
-        let totalHeight = element.offsetHeight;
-        const styles = window.getComputedStyle(element);
-        totalHeight += parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
-        return totalHeight;
-      }
-
-      function adjustCanvasSize() {
-        const section1Height = getTotalHeight(section1);
-        const totalHeight = section1Height + header;
-        canvas.style.height = `${totalHeight}px`;
-      }
-
+   
       // Inicializa el gradiente
       const gradient = new Gradient();
       gradient.initGradient('#gradient-canvas'); // Inicializa el gradiente después de haberlo creado
-      adjustCanvasSize();
     });
   </script>
 

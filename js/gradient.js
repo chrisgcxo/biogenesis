@@ -246,8 +246,18 @@ function normalizeColor(hexCode) {
         }
     }
     //cambiar tamaño//
+ header = 120;
+ section1 = document.querySelector('.seccion_1');
 
-    setSize(e = window.innerWidth, t = 580) {
+    getTotalHeight(element) {
+      let totalHeight = element.offsetHeight;
+      const styles = window.getComputedStyle(element);
+      totalHeight += parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
+      return totalHeight;
+    }
+    
+
+    setSize(e = window.innerWidth,t = getTotalHeight(section1) + header) {
         this.width = e, this.height = t, this.canvas.width = e, this.canvas.height = t, this.gl.viewport(0, 0, e, t), this.commonUniforms.resolution.value = [e, t], this.commonUniforms.aspectRatio.value = e / t, this.debug("MiniGL.setSize", {
             width: e,
             height: t
