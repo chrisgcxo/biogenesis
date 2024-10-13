@@ -823,7 +823,6 @@ span {
     border: solid 1px #6969691f;
     background-color: #03030341;
     transition: all 0.5s ease-in-out;
-    border-radius: 0 0 20px 20px;
   }
 
   .overlay-content {
@@ -1008,6 +1007,11 @@ span {
     flex-direction: column-reverse;
   }
   
+
+  .seccion_2 {
+    padding: 25px;
+  }
+
   .wrapper_texto_s2 {
     width: 100%;
     padding: 0px;
@@ -1021,6 +1025,7 @@ span {
 
 
   .seccion_2 .contenedorayf{
+    margin-top: 10px;
     padding: 0px;
     width: 100%;
     flex-direction: row-reverse;
@@ -1029,7 +1034,7 @@ span {
 
 
   .seccion_2 h2{
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
   .organizacion{
    width: 100%;
@@ -1053,6 +1058,7 @@ span {
   .nosotros{
     padding:20px;
     height: 100%;
+    gap: 60px;
   }
 .nosotros h1{
  font-size: 1.5em; 
