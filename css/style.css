@@ -980,6 +980,9 @@ span {
     margin-top: 20px;
     width: 100%;
     height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 
 
@@ -987,8 +990,8 @@ span {
     position: relative;
      height: 25vh;
      filter: none;
-    left: 30%;
      top: 65px;
+     left: 20px;
    }
 
 
