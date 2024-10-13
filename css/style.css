@@ -1068,17 +1068,26 @@ span {
     margin-left: 0px;
   }
   .texto_nos{
-    padding: 60px 50px;
+    padding:30px;
   }
+  .texto_nos::before{
+    clip-path: polygon(0 40px,40px 0,100% 0,100% calc(100% - 40px),calc(100% - 40px) 100%,0 100%,0 40px,2px  calc(40px + 0.83px),2px calc(100% - 2px),calc(100% - 40px - 0.83px) calc(100% - 2px),calc(100% - 2px) calc(100% - 40px - 0.83px),calc(100% - 2px) 2px,calc(40px + 0.83px) 2px,2px calc(40px + 0.83px));
+  }
+
+
 
   .nosotros h2{
  font-size: 0.9em;
  line-height: normal;
   }
   .conocenos_mas{
-    font-size: 1.05em;
+    width: 73%;
+    font-size: 1.01em;
     padding: 0px;
   }
+
+
+
 
   #wrap1 {
     left: 74%;
