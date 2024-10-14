@@ -1024,14 +1024,6 @@ span {
    }
 
 
-  /*social media*/
-  /*ocultar desktop*/
-  #img1,
-  #img2,
-  #img3 {
-    display: none;
-  }
-
 
   .wrapperaft{
     flex-direction: column-reverse;
@@ -1144,9 +1136,26 @@ span {
     width: 100%;
     padding: 10px;
     gap:0px;
+    align-items: flex-end;
   }
 
+  .social-media{
+    display: inherit;
+  }
 
+  .social-media .media:hover{
+    transform: translateY(0px);
+  }
+
+.media{
+  top: -33px;
+  left: -25px;
+  background-color: unset;
+  box-shadow: none;
+  filter: none;
+  backdrop-filter: none;
+  border: none;
+}
 
   .desc2 h3{
     padding: 0px;
