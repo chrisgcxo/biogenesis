@@ -249,6 +249,18 @@
 // Selecciona las imágenes o elementos que deseas activar
 const fotos = document.querySelectorAll('.container_img1, .contenedor_5');
 
+// Verifica el tamaño de la pantalla al cargar la página
+window.addEventListener('load', function() {
+  if (window.innerWidth < 500) {
+    const firstFoto = document.querySelector('.container_img1');
+    if (firstFoto) {
+      firstFoto.classList.add('activo');  // Agrega la clase 'activo' al primer elemento con la clase '.container_img1'
+      firstFoto.querySelector('.desc').style.visibility = 'visible'; // Asegura que la descripción esté visible
+    }
+  }
+});
+
+// Agrega el evento de click a todas las fotos
 fotos.forEach(fot => {
   fot.addEventListener('click', function() {
     toggle_act(this); // Pasa el elemento clicado como argumento
@@ -279,6 +291,7 @@ function toggle_act(element) {
     }
   }
 }
+
 
 
 //scroll nav bar
