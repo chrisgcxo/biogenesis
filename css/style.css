@@ -769,18 +769,7 @@ margin-left:100px;
     -8px -8px 12px 0 rgba(0, 0, 0, 0.25) inset;
 }
 
-/*efecto vidrio*/
-.glass {
-  background-color: #ffffff11;
-  backdrop-filter: blur(5px);
-  border-top: solid 3px #ffffff31;
-  border-right: solid 3px #ffffff31;
-  border-left: #0000004f;
-  border-bottom: #0000004f;
-  box-shadow: inset 11px -7px 19px 0px rgba(0, 0, 0, 0.25),
-    inset -11px 7px 19px 0px rgba(255, 255, 255, 0.25),
-    -15px 17px 17px rgba(10, 10, 10, 0.137);
-}
+
 
 
 /*texto giratorio*/
@@ -1099,6 +1088,7 @@ span {
     left: 20px;
     height: 40%;
     box-shadow: -12px -12px 16px 0  rgba(255, 255, 255, 0.3), 8px 8px 12px 0  rgba(0, 0, 0, 0.25);
+    transition: all 0.5s ease-in-out;
   }
 
 

@@ -279,17 +279,7 @@ navLinks.forEach(link => {
 
 
 
-    //cambiar estilo wrap1 y wrap2
-    function togglesocial(elementId) {
-      const element = document.getElementById(elementId);
-      if (element.style.opacity === "1" && element.style.visibility === "visible") {
-        element.style.opacity = "0";
-        element.style.visibility = "hidden";
-      } else {
-        element.style.opacity = "1";
-        element.style.visibility = "visible";
-      }
-    }
+    
 
 
 
@@ -321,33 +311,17 @@ navLinks.forEach(link => {
         }
       }
 
-      // Eliminar estilos  en función de una clase en pantallas pequeñas
-      function eliminarclase(classNameToRemove, classNameToKeep) {
-        const elements = document.querySelectorAll(`.${classNameToKeep}.${classNameToRemove}`);
-
-        if (window.innerWidth < 1000) {
-          elements.forEach(element => {
-            // Elimina la clase 'glass' solo si está presente
-            element.classList.remove(classNameToRemove);
-          });
-        }
-      }
-
-
-
       // Ejecutar las funciones
       if (window.innerWidth >= 1000) {
         createRotatingText();
       }
-      applyVanillaTilt();
-      eliminarclase('glass', 'texto');
-      // Recalcular el efecto Tilt en redimensionar
-      window.addEventListener('resize', applyVanillaTilt);
-      window.addEventListener('resize', () => {
-        eliminarclase('glass', 'texto');
 
-      });
-    });
+      applyVanillaTilt();
+      
+      // Recalcular el efecto Tilt en redimensionar
+      window.addEventListener('resize', applyVanillaTilt);});
+
+      
 
     <!-- Contador Regresivo -->
     const eventoFecha = new Date("November 16, 2024 09:00:00 GMT").getTime();
