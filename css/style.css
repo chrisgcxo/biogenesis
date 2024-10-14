@@ -1082,10 +1082,11 @@ span {
 /* cambiar a absolute y hacer un slider sort*/
 
 .seccion_2 .contenedorayf{
-  margin-top: 15px;
+  margin-top: 50px;
   padding: 0px;
   width: 100%;
   flex-direction: row-reverse;
+  align-items: center;
   height: 30vh;
 }
 
@@ -1114,10 +1115,12 @@ span {
   /*contenedor amara*/
 
   .contenedor_5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
     position: absolute;
     width: 50%;
     right: 20px;
-    height:40%;
+    height:35%;
   }
 
 
