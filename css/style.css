@@ -408,6 +408,10 @@ justify-content: space-around;
   align-items: center;
 }
 
+/*efecto flip*/
+
+
+
 .lugarygtm{
   margin-top:10px;
   display: flex;
@@ -1134,7 +1138,7 @@ span {
     bottom: 0px;
     left: 0px;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     gap:0px;
     align-items: flex-end;
   }
@@ -1146,8 +1150,8 @@ span {
   }
 
 .media{
-  top: -33px;
-  left: -25px;
+  top: -20px;
+  left: -20px;
   background-color: unset;
   box-shadow: none;
   filter: none;
@@ -1163,6 +1167,7 @@ span {
   .desc2 h4{
     padding: 0px;
     font-size: 1.02em;
+      line-height:12px;
   }
 
   .nosotros{

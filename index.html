@@ -263,7 +263,8 @@ window.addEventListener('load', function() {
     if(segfoto){
       segfoto.classList.add('inactivo');
       segfoto.querySelector('.desc').style.visibility = 'hidden';
-    }
+
+    }  
   }
 });
 
@@ -276,7 +277,7 @@ fotos.forEach(fot => {
 
 // Función para alternar las clases "activo" e "inactivo"
 function toggle_act(element) {
-  if (window.innerWidth < 600) {
+  if (window.innerWidth < 500) {
     // Primero, elimina la clase 'activo' de todos los elementos
     fotos.forEach(fot => {
       fot.classList.remove('activo');
