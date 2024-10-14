@@ -156,10 +156,10 @@
       <div class="contenedorayf">
 
         <!-- seccion amara-->
-        <div class=" contenedor_5">
+        <div class=" contenedor_5" >
           <!--redes escritorio 3-->
        
-          <div class="desc">
+          <div class="desc" id="amara">
             <div class="desc2">
             <h3>Amara Torrado</h3>
             <h4>organizacion</h4>
@@ -177,8 +177,7 @@
         <!--seccion fede-->
         <!--contenedor fede-->
         <div class="container_img1">
-        
-          <div class="desc">
+          <div class="desc"id="alavaro">
             <div class="desc2">
               <h3>Alvaro Rojas</h3>
               <h4>Artista</h4>
@@ -247,6 +246,40 @@
 
   <!-- Texto Giratorio y Vanilla Tilt -->
   <script>
+// Selecciona las imágenes o elementos que deseas activar
+const fotos = document.querySelectorAll('.container_img1, .contenedor_5');
+
+fotos.forEach(fot => {
+  fot.addEventListener('click', function() {
+    toggle_act(this); // Pasa el elemento clicado como argumento
+  });
+});
+
+// Función para alternar las clases "activo" e "inactivo"
+function toggle_act(element) {
+  if (window.innerWidth < 600) {
+    // Primero, elimina la clase 'activo' de todos los elementos
+    fotos.forEach(fot => {
+      fot.classList.remove('activo');
+      fot.classList.add('inactivo'); // Asegúrate de que todos los demás tengan la clase 'inactivo'
+      
+      // Oculta el elemento hijo .desc de los demás
+      fot.querySelector('.desc').style.visibility = 'hidden';
+    });
+
+    // Luego, agrega la clase 'activo' al elemento clicado
+    element.classList.toggle('activo');
+    element.classList.toggle('inactivo');
+    
+    // Controla la visibilidad del elemento hijo .desc basado en la clase 'activo'
+    if (element.classList.contains('activo')) {
+      element.querySelector('.desc').style.visibility = 'visible';
+    } else {
+      element.querySelector('.desc').style.visibility = 'hidden';
+    }
+  }
+}
+
 
 //scroll nav bar
 // Selecciona todos los enlaces de la navbar

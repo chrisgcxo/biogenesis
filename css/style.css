@@ -1081,7 +1081,6 @@ span {
 
 /*contenedor alvaro*/
 
-
   .container_img1{
     position: absolute;
     width:  55%;
@@ -1111,6 +1110,7 @@ span {
     width: 50%;
     right: 20px;
     height:35%;
+    transition: all 0.5s ease-in-out;
   }
 
 
@@ -1122,6 +1122,18 @@ span {
     object-position: bottom center;
     margin-top: 0px;
     margin-bottom: 0px;
+  }
+
+  /*botones fotos mobile*/
+
+  .activo {
+    z-index: 2;
+    transform: scale(1.0);
+  }
+  
+  .inactivo {
+    z-index: 1;
+    transform: scale(0.9);
   }
 
   .desc{
