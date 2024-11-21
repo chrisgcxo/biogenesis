@@ -36,7 +36,7 @@
       <li id="glow"><a href="#section2">eventos</a></li>
       <li id="glow"><a href="#section3">nosotros</a></li>
       <!--efecto glitch-->
-      <li class ="text__glitch"><a href="#section4">muestra</a></li>
+      <li ><a class ="text__glitch" href="#section4">muestra</a></li>
     </ul>
   </nav>
   <div class="mobilewrapper">
@@ -239,7 +239,6 @@
 
 <!-- Nueva sección 4 -->
 <section class="muestra" id="section4">
-  <img src="images/glitch_textura.gif" alt="Animated GIF" class="overlay-gif">
   <div class="titulo_y_sub">
     <div class="titulo_seccion4">
       <h1>UTOPÍAS</h1>
@@ -255,6 +254,7 @@
   
   </div>
       <!--REGISTRO-->
+      <div class="overlay_g"> </div>
       <div class="Registro">
         <div class="wrapper">
           <div id="overlay_fotos"></div>
@@ -422,7 +422,7 @@ function toggle_act(element) {
 
 //scroll nav bar
 // Selecciona todos los enlaces de la navbar
-const navLinks = document.querySelectorAll('.deskwrapper a');
+const navLinks = document.querySelectorAll('.deskwrapper a, .text__glitch a');
 
 navLinks.forEach(link => {
   link.addEventListener('click', function(e) {
