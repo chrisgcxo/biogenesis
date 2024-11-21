@@ -61,6 +61,8 @@
 </header>
 
 <body>
+  
+  <img id="glitch_t" src="images/glitch_textura_2.gif"></img>
   <div class="gradiente_wrap">
     <canvas id="gradient-canvas" data-transition-in />
   </div>
@@ -361,7 +363,22 @@
             el.style.color = ''; // Esto restablecerá el color al valor por defecto del CSS
         });
     });
+// Función para mostrar y ocultar la imagen al hacer hover
+function showImageOnHover() {
+  const image = document.getElementById('glitch_t'); // Asegúrate de tener una imagen con este ID
 
+  textElements.forEach((el) => {
+    el.addEventListener('mouseover', () => {
+      image.style.display = 'block'; // Muestra la imagen
+      setTimeout(() => {
+        image.style.display = 'none'; // Oculta la imagen después de 2 segundos
+      }, 2000);
+    });
+  });
+}
+
+// Llama a la función
+showImageOnHover();
 
 
 // Selecciona las imágenes o elementos que deseas activar
