@@ -40,7 +40,9 @@ body {
   height: auto; /* La altura se ajusta automáticamente al contenido */
   overflow-x: hidden; /* Evitar el desplazamiento horizontal */
   box-sizing: border-box; /* Incluir padding y bordes en el cálculo de ancho y alto */
-  font-size: 16px; /* Tamaño de fuente base para mejor legibilidad */
+/* Tamaño de fuente base para mejor legibilidad */
+  font-family: 'JetBrains Mono', monospace;
+  color: #fff;
 }
 
 
@@ -78,19 +80,22 @@ header nav {
   align-items: center;
   /* Aligns items vertically in the center */
   margin: auto;
+
 }
 
+header nav ul li{
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  margin: 20px;
+}
 
 header nav a {
   text-decoration: none;
   align-items: center;
-  margin: 0 15px;
   font-family: 'JetBrains Mono', monospace;
   text-decoration: none;
   color: #fff;
   font-weight: 200;
   font-size: 1.15em;
-
 }
 
 /*efecto hover*/
@@ -106,6 +111,18 @@ header nav a {
     transform: translateY(-5px);
   }
 }
+
+.text__glitch  {
+cursor: pointer;
+}
+
+.text__glitch span {
+  display: inline-block; /* Asegura que cada letra mantenga su posición */
+  width: 1ch; /* Asegura que cada letra ocupe el mismo ancho */
+  text-align: center; /* Centra el texto dentro de cada span */
+}
+
+
 
 ul {
   list-style: none;
@@ -718,6 +735,7 @@ margin-left:100px;
   margin: 0px;
 }
 .texto_nos{
+  color: black;
   position: relative;
   padding: 80px;
   width: 100%;
@@ -739,6 +757,147 @@ margin-left:100px;
   gap: 20px;
  padding:20px;
 }
+.muestra {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 170vh;
+  margin-top: 450px;
+  padding: 50px;
+background-color: #000000;
+  text-align: left; /* Centra el texto */
+  position: relative; /* Enable positioning context for absolute children */
+}
+
+.overlay-gif {
+  filter: unset;
+  position: absolute; /* Position the GIF absolutely */
+  top:200px; /* Adjust as needed */
+  left: 0; /* Adjust as needed */
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height */
+  opacity: 0.3; /* Adjust as needed */
+  object-fit: cover; /* Maintain aspect ratio */
+mix-blend-mode:difference;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+.titulo_y_sub{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  width:100%;
+  margin-bottom: 10px;
+}
+.titulo_seccion4{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 0px;
+  padding: 10px;
+}
+
+.titulo_seccion4 h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 2.5em;
+  font-weight: 300;
+  color: #df18be;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: underline;
+}
+
+
+
+.obra{
+  width: 50%;
+  text-align: center;
+  margin-left: 40px;
+}
+/*registro*/
+.Registro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.wrapper{
+	width: 100%;
+  margin-top: 50px;
+}
+
+.wrapper img{
+  filter: unset;
+  border: 1px solid rgb(47, 231, 255);
+  cursor:"pointer";
+}
+.vertical {
+  border: 1px solid rgb(47, 231, 255);
+}
+.container > div {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+
+}
+
+.container > div > img {
+  cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: difference;
+    transition: all 0.5s ease-in-out;
+}
+.container > div > img:hover{
+filter: drop-shadow(0px 0px 10px rgba(47, 231, 255, 0.644));
+}
+
+/* Estilo para el overlay */
+#overlay_fotos {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.7);
+z-index: 5;
+display: none;
+pointer-events: none; /* Allow clicks to pass through */
+backdrop-filter: blur(5px);
+transition: all .5s;
+}
+
+.agrandada{
+  transition: all 0.5s ease-in-out;
+}
+/* Grid */
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1.5fr));
+    grid-auto-rows: 175px;
+		grid-auto-flow: dense; /* Fill all spaces with fitted images */
+}
+
+.horizontal {
+	grid-column: span 2;
+}
+
+.vertical {
+	grid-row: span 2;
+}
+
+.big {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
 
 
 /*neumorfismo*/

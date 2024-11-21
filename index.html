@@ -1,6 +1,10 @@
 
 <!--to do list-->
-<!--1. ver si es realmente necesaria la funcion para escalar en fondo del canvasahora que se cuanto mide la section 1 es 120(header)+150vh(section1)-->
+<!--agregar un boton de cerrar a las imagenes y que desactive el overlay-->
+<!--arreglar texto de la obra biogenesis etc -->
+<!--hacer diapositivas-->
+<!--arreglar experiencia ar-->
+<!---arreglar instalación-->
 <!DOCTYPE html>
 <html>
 
@@ -21,7 +25,8 @@
   <!--google iconos-->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+  </head>
 <header>
   <nav class="deskwrapper">
     <img src="images/logo(b).png" alt="logo">
@@ -30,6 +35,8 @@
       <li id="glow"><a href="#section1">inicio</a></li>
       <li id="glow"><a href="#section2">eventos</a></li>
       <li id="glow"><a href="#section3">nosotros</a></li>
+      <!--efecto glitch-->
+      <li class ="text__glitch"><a href="#section4">muestra</a></li>
     </ul>
   </nav>
   <div class="mobilewrapper">
@@ -230,6 +237,48 @@
       </div>
 </section>
 
+<!-- Nueva sección 4 -->
+<section class="muestra" id="section4">
+  <img src="images/glitch_textura.gif" alt="Animated GIF" class="overlay-gif">
+  <div class="titulo_y_sub">
+    <div class="titulo_seccion4">
+      <h1>UTOPÍAS</h1>
+      <h1 style="margin-left: 50px;">COSMO-</h1>
+      <h1>TECNICAS</h1>
+    </div>
+    <div class ="obra">
+      <!--titulo obra, grupo-->
+      <h1 id="titulo_obra" style="font-weight:400;padding: 20px; color:rgb(248, 248, 248);font-size: 6vh;position: relative;z-index: 3; border: 1px solid rgb(255, 255, 255);">YO,MOUNSTRUO MIO</h1>
+      <!--integrantes-->
+      <p style="position: relative;z-index: 3;font-size: 1.1em; padding:10px;">"Un viaje sensorial que desvela un nuevo universo, donde yo, me convierto en carne de cada una de mis pinceladas. Invitando a descubrir lo que yace más allá de lo evidente”</p>
+    </div>
+  
+  </div>
+      <!--REGISTRO-->
+      <div class="Registro">
+        <div class="wrapper">
+          <div id="overlay_fotos"></div>
+          <div class="container">
+            <div class="horizontal"><img src="images/registro/registro_7.jpeg" alt="" onclick="abrir_imagen(this)"></div>
+            <div class="vertical"><iframe width="100%" height="100%" src="https://youtube.com/embed/quvasYzZdr8" 
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div><img src="images/registro/registro_9.jpeg" alt="" onclick="abrir_imagen(this)"></div>
+            <div class="big"><img src="images/registro/registro_1.jpeg" alt="" onclick="abrir_imagen(this)"></div>
+            <div class="vertical"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/7kT_IxI6_wM" 
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="horizontal"><img  src="images/registro/registro_6.jpeg" onclick="abrir_imagen(this)" alt=""></div>
+            <div><img src="images/registro/registro_2.jpeg" alt="" onclick="abrir_imagen(this)"></div>
+            <div class="horizontal"><img  src="images/registro/registro_4.jpeg""  onclick="abrir_imagen(this)" alt=""></div>
+            <div><img src="images/registro/registro_8.jpeg" alt=""onclick="abrir_imagen(this)"></div>
+            <div><img src="images/registro/registro_3.jpeg" alt="" onclick="abrir_imagen(this)"></div>
+            <div class="horizontal"><img  src="images/registro/registro_5.jpeg"" onclick="abrir_imagen(this)" alt=""></div>
+            <h1 style="color: white;">BIOGENESIS:LARA,FIORELLA,CHRISTIAN,DELFINA,CAMILA</h1>
+          </div>
+        </div>
+      </div>
+</section>
+
 
   <!--scripts-->
   <script type="module">
@@ -244,8 +293,77 @@
 
 
 
-  <!-- Texto Giratorio y Vanilla Tilt -->
+  <!-- Texto Giratorio , Vanilla Tilt  y glitch texto-->
   <script>
+    //funcion para agrandar imagen
+    const overlay_f = document.getElementById("overlay_fotos");
+
+  
+    function abrir_imagen(element) {
+      // Verifica si la imagen ya está agrandada
+      if (element.classList.contains('agrandada')) {
+      // Si está agrandada, la restaura a su tamaño original
+      element.classList.remove('agrandada');
+      element.style.transform = 'scale(1)';
+      element.style.zIndex = '1'; // Restablece el z-index
+      element.style.position = ''; // Restablece la posición
+      element.style.top = ''; // Restablece la posición
+      element.style.left = ''; // Restablece la posición
+      element.style.mixBlendMode='';
+      overlay_f.style.display='';
+      } else {
+      // Si no está agrandada, primero restaura cualquier imagen agrandada
+      const agrandada = document.querySelector('.agrandada');
+      if (agrandada) {
+        agrandada.classList.remove('agrandada');
+        agrandada.style.transform = 'scale(1)';
+        agrandada.style.zIndex = '1';
+        agrandada.style.position = '';
+        agrandada.style.top = '';
+        agrandada.style.left = '';
+        agrandada.style.mixBlendMode='';
+      }
+      // Luego agranda la imagen seleccionada
+      element.classList.add('agrandada');
+      element.style.transform = 'scale(2)';
+      element.style.zIndex = '10'; // Aumenta el z-index para que aparezca encima del gif
+      element.style.mixBlendMode = 'unset'; // Cambia la posición a relativa;
+      overlay_f.style.display='block';
+      }
+    }
+
+ // Función para generar un color aleatorio
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    // Glitch
+    const textElements = document.querySelectorAll('.text__glitch');
+    const text = baffle(textElements);
+    text.set({ characters: "m̵̧̜̈̋̌̚█▓█ M̷̹̮͐̎ █▓/Ù̶̝͕̄ █ Ě̶̗̯͓͊▓▓/█ █/S̷̡̛͔̮͍͘ ▓T̷̡͍̒͂̕ █<R̷͇̞̥̽͊̿ ▓/Ä̸̜̭́̔͜͝>█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░>", speed: 100 });
+
+    // Inicia la animación al pasar el mouse
+    textElements.forEach((el) => {
+        el.addEventListener('mouseover', () => {
+            text.start();
+            text.reveal(7000);
+            // Cambiar el color del texto a un color aleatorio
+            el.style.color = getRandomColor();
+        });
+
+        el.addEventListener('mouseout', () => {
+            // Opcional: Restablecer el color original o a otro color
+            el.style.color = ''; // Esto restablecerá el color al valor por defecto del CSS
+        });
+    });
+
+
+
 // Selecciona las imágenes o elementos que deseas activar
 const fotos = document.querySelectorAll('.container_img1, .contenedor_5');
 
@@ -378,7 +496,7 @@ navLinks.forEach(link => {
       
 
     <!-- Contador Regresivo -->
-    const eventoFecha = new Date("November 16, 2024 09:00:00 GMT").getTime();
+    const eventoFecha = new Date("January 16, 2025 09:00:00 GMT").getTime();
 
     const actualizarContador = () => {
       const ahora = new Date().getTime();
@@ -405,7 +523,8 @@ navLinks.forEach(link => {
 
   <!-- Vanilla Tilt Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-
 </body>
 
+
 </html>
+
